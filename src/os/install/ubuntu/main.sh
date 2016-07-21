@@ -34,7 +34,7 @@ main() {
         # add key
         apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
 
-        add_to_source_list "deb https://cloud.r-project.org/bin/linux/ubuntu/ trusty/" "cran.list" \
+        add_to_source_list "https://cloud.r-project.org/bin/linux/ubuntu/ trusty/" "cran.list" \
             || print_error "R (add to package resource list)"
 
         update &> /dev/null \
@@ -72,7 +72,7 @@ main() {
 
     if ! package_is_installed "dropbox"; then
 
-        add_to_source_list "deb [arch=i386,amd64] http://linux.dropbox.com/ubuntu trusty main" "dropbox.list" \
+        add_to_source_list "[arch=i386,amd64] http://linux.dropbox.com/ubuntu trusty main" "dropbox.list" \
             || print_error "dropbox (add to package resource list)"
 
         update &> /dev/null \

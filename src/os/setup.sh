@@ -243,7 +243,7 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    print_info "Install applications"
+    print_info "Install R"
     Rscript R/install.R
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

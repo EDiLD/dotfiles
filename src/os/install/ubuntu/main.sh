@@ -55,6 +55,8 @@ main() {
 
     if ! package_is_installed "dropbox"; then
 
+        apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 5044912E  
+
         add_to_source_list "[arch=i386,amd64] http://linux.dropbox.com/ubuntu trusty main" "dropbox.list" \
             || print_error "dropbox (add to package resource list)"
 
@@ -126,7 +128,7 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    install_package "pgadmin" "pgadmin"    
+    install_package "pgadmin" "pgadmin3"    
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -180,6 +182,20 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "tor" "tor"
+
+    if ! package_is_installed "tor-browser"; then
+
+        # add key
+        gpg --keyserver keys.gnupg.net --recv 886DDD89
+        gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
+
+        add_to_source_list "http://deb.torproject.org/torproject.org trusty main" "tor-browser.list" \
+            || print_error "tor-browser (add to package resource list)"
+
+        update &> /dev/null \
+            || print_error "tor-browser (resync package index files)"
+
+    fi
     install_package "tor-browser" "tor-browser"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

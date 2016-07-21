@@ -42,7 +42,7 @@ tohome() {
 toother() {
         sourceFile="$(cd .. && pwd)/$1"
         targetFile="$HOME/$2"
-        targetdir=$(dirname "$targetfile")
+        targetdir=$(dirname "$targetFile")
         echo "$targetdir"
         mkdir -p "$targetdir"
 

@@ -42,8 +42,9 @@ tohome() {
 toother() {
         sourceFile="$(cd .. && pwd)/$1"
         targetFile="$HOME/$2"
+        targetdir=$(dirname "$targetfile")
+        mkdir -p "$targetdir"
 
-        mkdir -p $(dirname "$targetfile")
         if [ ! -e "$targetFile" ] || $skipQuestions; then
 
             execute \

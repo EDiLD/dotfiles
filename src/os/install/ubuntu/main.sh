@@ -183,18 +183,8 @@ main() {
 
     install_package "tor" "tor"
 
-    if ! package_is_installed "tor-browser"; then
-
-        # add key
-        apt-key adv --keyserver keys.gnupg.net --recv 886DDD89
-
-        add_to_source_list "http://deb.torproject.org/torproject.org trusty main" "tor-browser.list" \
-            || print_error "tor-browser (add to package resource list)"
-
-        update &> /dev/null \
-            || print_error "tor-browser (resync package index files)"
-
-    fi
+    add_ppa "webupd8team/tor-browser"
+    update
     install_package "tor-browser" "tor-browser"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

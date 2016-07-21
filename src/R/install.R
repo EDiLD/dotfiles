@@ -26,7 +26,8 @@ cran_pkg <- c("devtools", "bit64", "boot", 'Cairo', 'cairoDevice', 'car',
               'tm', 'tseries', 'vegan', 'VGAM', 'vioplot', 'webchem',
               'xml2', 'xkcd', 'xtable', 'zoo')
 install.packages(cran_pkg, 
-                 dependencies = TRUE, repos = 'https://cloud.r-project.org/')
+                 lib = '~/R/library',
+                 dependencies = TRUE)
 
 
 # github ------------------------------------------------------------------

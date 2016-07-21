@@ -243,9 +243,8 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    print_info "Install R"
-    pwd
-
+    print_info "Install R packages"
+    sudo sh -c "R_LIBS_USER=${R_LIBS_USER-'~/R/library'} >> '/etc/R/Renviron'"
     Rscript ../R/install.R
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

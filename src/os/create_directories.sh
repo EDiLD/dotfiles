@@ -7,15 +7,15 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 create_directories() {
 
-    # declare -a DIRECTORIES=(
-    #     "$HOME/Downloads/torrents"
-    # )
+    declare -a DIRECTORIES=(
+        "$HOME/R/library"
+    )
 
-    # # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    # for i in "${DIRECTORIES[@]}"; do
-    #     mkd "$i"
-    # done
+    for i in "${DIRECTORIES[@]}"; do
+        mkd "$i"
+    done
 
 }
 

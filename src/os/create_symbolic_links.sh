@@ -18,6 +18,8 @@ create_symlinks() {
 
         "conky/conkyrc"
 
+        "R/Rprofile"
+
     )
 
     local i=""

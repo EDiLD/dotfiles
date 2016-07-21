@@ -1,6 +1,1 @@
-#!/bin/bash
-
-# Clear console on exit
-
-[ "$SHLVL" == 1 ] \
-    && clear &> /dev/null
+/home/edisz/.bash_logout

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-declare -r GITHUB_REPOSITORY="alrra/dotfiles"
+declare -r GITHUB_REPOSITORY="EDiLD/dotfiles"
 
 declare -r DOTFILES_ORIGIN="git@github.com:$GITHUB_REPOSITORY.git"
 declare -r DOTFILES_TARBALL_URL="https://github.com/$GITHUB_REPOSITORY/tarball/master"
@@ -156,27 +156,10 @@ verify_os() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    # Check if the OS is `macOS` and
-    # it's above the required version
-
-    os_name="$(uname -s)"
-
-    if [ "$os_name" == "Darwin" ]; then
-
-        os_version="$(sw_vers -productVersion)"
-
-        if is_supported_version "$os_version" "$MINIMUM_MACOS_VERSION"; then
-            return 0
-        else
-            printf "Sorry, this script is intended only for macOS %s+" "$MINIMUM_MACOS_VERSION"
-        fi
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
     # Check if the OS is `Ubuntu` and
     # it's above the required version
 
-    elif [ "$os_name" == "Linux" ] && [ -e "/etc/lsb-release" ]; then
+    if [ "$os_name" == "Linux" ] && [ -e "/etc/lsb-release" ]; then
 
         os_version="$(lsb_release -d | cut -f2 | cut -d' ' -f2)"
 
@@ -189,7 +172,7 @@ verify_os() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     else
-        printf "Sorry, this script is intended only for macOS and Ubuntu!"
+        printf "Sorry, this script is intended only for Ubuntu!"
     fi
 
     return 1
@@ -266,6 +249,11 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     ./preferences/main.sh
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    print_info "Install applications"
+    Rscript R/install.R
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

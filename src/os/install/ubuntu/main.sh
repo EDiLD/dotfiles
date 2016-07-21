@@ -186,8 +186,7 @@ main() {
     if ! package_is_installed "tor-browser"; then
 
         # add key
-        gpg --keyserver keys.gnupg.net --recv 886DDD89
-        gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
+        apt-key adv --keyserver keys.gnupg.net --recv 886DDD89
 
         add_to_source_list "http://deb.torproject.org/torproject.org trusty main" "tor-browser.list" \
             || print_error "tor-browser (add to package resource list)"

@@ -148,7 +148,6 @@ extract() {
 
 verify_os() {
 
-    declare -r MINIMUM_MACOS_VERSION="10.10"
     declare -r MINIMUM_UBUNTU_VERSION="14.04"
 
     local os_name=""
@@ -158,6 +157,8 @@ verify_os() {
 
     # Check if the OS is `Ubuntu` and
     # it's above the required version
+
+    os_name="$(uname -s)"
 
     if [ "$os_name" == "Linux" ] && [ -e "/etc/lsb-release" ]; then
 

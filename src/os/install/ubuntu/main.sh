@@ -55,7 +55,7 @@ main() {
 
     if ! package_is_installed "dropbox"; then
 
-        apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 5044912E  
+        sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 5044912E  
 
         add_to_source_list "[arch=i386,amd64] http://linux.dropbox.com/ubuntu trusty main" "dropbox.list" \
             || print_error "dropbox (add to package resource list)"
@@ -135,7 +135,7 @@ main() {
     if ! package_is_installed "r-base"; then
 
         # add key
-        apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
+        sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
 
         add_to_source_list "https://cloud.r-project.org/bin/linux/ubuntu/ trusty/" "cran.list" \
             || print_error "R (add to package resource list)"

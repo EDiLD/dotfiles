@@ -18,8 +18,8 @@ main() {
     # Tools for compiling/building software from source
     install_package "Build Essential" "build-essential"
 
-    # GnuPG archive keys of the Debian archive
-    install_package "GnuPG archive keys" "debian-archive-keyring"
+    # # GnuPG archive keys of the Debian archive
+    # install_package "GnuPG archive keys" "debian-archive-keyring"
 
     # Software which is not included by default
     # in Ubuntu due to legal or copyright reasons
@@ -29,24 +29,7 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    if ! package_is_installed "google-chrome-unstable"; then
-
-        # add key
-        apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
-
-        add_to_source_list "https://cloud.r-project.org/bin/linux/ubuntu/ trusty/" "cran.list" \
-            || print_error "R (add to package resource list)"
-
-        update &> /dev/null \
-            || print_error "R (resync package index files)"
-
-    fi
-
-    install_package "R" "r-base"
-    install_package "R" "r-base-core"
-    install_package "R" "r-base-dev"
-    install_package "R" "r-recommended"
-
+    install_package "bash-completion" "bash-completion"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -147,7 +130,31 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    if ! package_is_installed "r-base"; then
+
+        # add key
+        apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
+
+        add_to_source_list "https://cloud.r-project.org/bin/linux/ubuntu/ trusty/" "cran.list" \
+            || print_error "R (add to package resource list)"
+
+        update &> /dev/null \
+            || print_error "R (resync package index files)"
+
+    fi
+
+    install_package "R-base" "r-base"
+    install_package "R-base-core" "r-base-core"
+    install_package "R-base-dev" "r-base-dev"
+    install_package "r-recommendedcd source" "r-recommended"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
     install_package "rhythmbox" "rhythmbox"    
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    install_package "sublime-text" "sublime-text"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

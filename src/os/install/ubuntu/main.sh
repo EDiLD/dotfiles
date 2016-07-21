@@ -183,9 +183,13 @@ main() {
 
     install_package "tor" "tor"
 
-    add_ppa "webupd8team/tor-browser"
-    update
-    install_package "tor-browser" "tor-browser"
+    if ! package_is_installed "tor-browser"; then
+        add_ppa "webupd8team/tor-browser"
+        update
+
+    fi
+    
+        install_package "tor-browser" "tor-browser"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

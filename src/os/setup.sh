@@ -244,7 +244,7 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     print_info "Install R"
-    Rscript R/install.R
+    Rscript ..R/install.R
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

@@ -160,18 +160,8 @@ verify_os() {
 
     os_name="$(uname -s)"
 
-    if [ "$os_name" == "Linux" ] && [ -e "/etc/lsb-release" ]; then
-
-        os_version="$(lsb_release -d | cut -f2 | cut -d' ' -f2)"
-
-        if is_supported_version "$os_version" "$MINIMUM_UBUNTU_VERSION"; then
+    if [ "$os_name" == "Linux" ]; then
             return 0
-        else
-            printf "Sorry, this script is intended only for Ubuntu %s+" "$MINIMUM_UBUNTU_VERSION"
-        fi
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
     else
         printf "Sorry, this script is intended only for Ubuntu!"
     fi

@@ -204,8 +204,11 @@ main() {
     
     execute \
         "[ -d /usr/share/fonts/opentype ] || sudo mkdir -p /usr/share/fonts/opentype" \
+        "Install Source Code Pro"
+    execute \
         "sudo git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git /usr/share/fonts/opentype/scp" \
-        "sudo fc-cache -f -v"
+         "clone repo"
+    execute "sudo fc-cache -f -v" "update cache"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

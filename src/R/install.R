@@ -9,7 +9,7 @@ cran_pkg <- c("devtools", "bit64", "boot", 'Cairo', 'cairoDevice', 'car',
               'drc', 'drm', 'fitdistrplus', 'flexsurv', 
               'fortunes', 'gamlls', 'gamlss.add', 'gamlss.cens',
               'gamlss.dist', 'gamm4', 'ggExtra', 'ggmap', 
-              'ggplot2', 'glmmADMB', 'gridExtra', 'gridSVG',
+              'ggplot2', 'gridExtra', 'gridSVG',
               'GUTS', 'Hmisc', 'httr', 'indicspecies', 'int64',
               'jpeg', 'knitr', 'labdsv', 'leaps', 'lme4',
               'lmerTest', 'lmtest', 'lsmeans', 'lubridate', 
@@ -17,25 +17,31 @@ cran_pkg <- c("devtools", "bit64", "boot", 'Cairo', 'cairoDevice', 'car',
               'mgcv', 'microbenchmark', 'multcomp', 'MuMIn',
               'mvabund', 'mvtnorm', 'NADA', 'nlme', 'nlstools', 'parallel',
               'pkbrtest', 'permute', 'plotrix', 'png', 'profr',
-              'quantreg', 'randomForest', 'raster', 'rcdk', 
+              'quantreg', 'randomForest', 'raster', 'rcdk', 'R2admb',
               'Rcpp', 'RCurl', 'readxl', 'relaimpo', 'reshape2',
               'rgdal', 'rgeos', 'rgl', 'rgrass7', 'rjags', 
               'rJava', 'rmarkdown', 'roxygen2', 'RPostgreSQL',
               'rpubchem', 'rstan', 'rvest', 'sandwich', 
               'scales', 'simecol', 'rodeo', 'sp', 'spatial', 
               'spatstat', 'SSN', 'stringr', 'stringdist', 'svglite',
-              'taxize', 'testthat', 'tikzDivice', 'timeSeries',
+              'taxize', 'testthat', 'tikzDevice', 'timeSeries',
               'tm', 'tseries', 'vegan', 'VGAM', 'vioplot', 'webchem',
               'xml2', 'xkcd', 'xtable', 'zoo')
 
 cran_pkg <- cran_pkg[!(cran_pkg %in% inst_pkg)]
 if (length(cran_pkg) > 0) {
        install.packages(cran_pkg, 
-                  lib = '~/R/library',
+                 lib = '~/R/library',
                  dependencies = TRUE, 
                  repos = 'https://cloud.r-project.org/')
 }
 
+
+install.packages("glmmADMB", 
+    repos=c("http://glmmadmb.r-forge.r-project.org/repos",
+            getOption("repos")),
+    type="source",
+    lib = '~/R/library')
 
 
 # github ------------------------------------------------------------------

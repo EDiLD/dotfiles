@@ -1,1 +1,7 @@
-/home/edisz/.gitconfig
+[user]
+	name = edisz
+	email = eduardszoecs@gmail.com
+[github]
+	user = EDiLD
+[push]
+	default = simple

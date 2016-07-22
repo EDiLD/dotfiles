@@ -216,6 +216,10 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    install_package "shimmer-themes" "shimmer-themes"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
     install_package "sublime-text" "sublime-text"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -258,6 +262,7 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "unison" "unison"
+    install_package "unison-gtk" "unison-gtk"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

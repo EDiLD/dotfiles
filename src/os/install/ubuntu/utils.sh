@@ -101,7 +101,7 @@ install_zotero() {
 }
 
 install_dropbox() {
-    if [ -d '~/.dropbox-dist/dropboxd' ]; then
+    if [ -d '$HOME/.dropbox-dist/dropboxd' ]; then
         print_success "Dropbox"
     else
         if [ `uname -m` == "x86_64" ]; then

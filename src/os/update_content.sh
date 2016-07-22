@@ -112,9 +112,7 @@ main() {
 
         # Update content and remove untracked files
         execute \
-            "git fetch --all \
-                && git reset --hard origin/master \
-                && git clean -fd" \
+            "git fetch --all  && git reset --hard origin/master && git clean -fd" \
             "Update content"
 
     fi

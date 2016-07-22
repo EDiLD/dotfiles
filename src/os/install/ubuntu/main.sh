@@ -155,6 +155,10 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    install_package "rbenv" "rbenv"   
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
     install_package "rhythmbox" "rhythmbox"    
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

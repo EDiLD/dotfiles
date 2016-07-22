@@ -70,5 +70,6 @@ if (length(bioc_pkg) > 0) {
 }
 # Update existing ------------------------------------------------------------
 update.packages(repos = 'https://cloud.r-project.org/',
-  ask = FALSE
+  ask = FALSE,
+  lib.loc =  '~/R/library'
   )

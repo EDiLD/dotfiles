@@ -152,6 +152,7 @@ main() {
 
     install_package "openbabel" "openbabel"
     install_package "libopenbabel4" "libopenbabel4"
+    install_package "libopenbabel-dev" "libopenbabel-dev"
     install_package "openbabel-gui" "openbabel-gui"
     install_package "python-openbabel" "python-openbabel"
 
@@ -217,14 +218,15 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    
-    execute \
-        "[ -d /usr/share/fonts/opentype ] || sudo mkdir -p /usr/share/fonts/opentype" \
-        "Install Source Code Pro"
-    execute \
-        "sudo git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git /usr/share/fonts/opentype/scp" \
-         "clone repo"
-    execute "sudo fc-cache -f -v" "update cache"
+    if [ ! -d "/usr/share/fonts/opentype" ]; then
+        execute \
+            "[ -d /usr/share/fonts/opentype ] || sudo mkdir -p /usr/share/fonts/opentype" \
+            "Install Source Code Pro"
+        execute \
+            "sudo git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git /usr/share/fonts/opentype/scp" \
+             "clone repo"
+        execute "sudo fc-cache -f -v" "update cache"
+    fi
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -274,7 +276,7 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     # zotero
 
-    ../zotero/main.sh
+    execute "./zotero/main.sh"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

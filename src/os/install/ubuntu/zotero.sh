@@ -11,7 +11,6 @@ TMP="/tmp/zotero.tar.bz2"
 DEST_FOLDER=zotero
 EXEC=zotero
 
-echo ">>> Installing locally"
 DEST="$HOME"
 MENU_PATH="$HOME/.local/share/applications/zotero.desktop"
 MENU_DIR="$HOME/.local/share/applications"

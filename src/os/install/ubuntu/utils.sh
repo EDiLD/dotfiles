@@ -63,6 +63,45 @@ install_package() {
 
 }
 
+install_zotero() {
+    VERSION="4.0.29.10"
+    if [ `uname -m` == "x86_64" ]; then
+        ARCH="x86_64"
+    else
+        ARCH="i686"
+    fi
+    TMP="/tmp/zotero.tar.bz2"
+    DEST_FOLDER='zotero'
+
+    DEST="/opt"
+    MENU_PATH="/usr/share/applications/zotero.desktop"
+    MENU_DIR="/usr/share/applications"
+
+    URL="http://download.zotero.org/standalone/$VERSION/Zotero-${VERSION}_linux-$ARCH.tar.bz2"
+
+    wget $URL -O $TMP
+
+    if [ -d $DEST/$DEST_FOLDER ]; then
+        print_success "Zotero"
+    fi
+
+    tar -xpf $TMP -C $DEST
+
+    mv $DEST/Zotero_linux-$ARCH $DEST/$DEST_FOLDER
+
+    if [ -f $MENU_DIR ]; then
+        mkdir $MENU_DIR
+    fi
+
+    echo "[Desktop Entry]
+    Name=Zotero
+    Comment=Open-source reference manager (standalone version)
+    Exec=$DEST/$DEST_FOLDER/zotero
+    Icon=accessories-dictionary
+    Type=Application
+    StartupNotify=true" > $MENU_PATH
+}
+
 package_is_installed() {
     dpkg -s "$1" &> /dev/null
 }

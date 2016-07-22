@@ -281,8 +281,7 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     # zotero
 
-    execute "./zotero.sh"
-
+    execute 'install_zotero' 'Zotero'
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     print_in_green "\n  ---\n\n"

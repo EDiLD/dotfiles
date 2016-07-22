@@ -61,3 +61,7 @@ if (length(bioc_pkg) > 0) {
        source("https://bioconductor.org/biocLite.R")
        biocLite(bioc_plg)
 }
+# Update existing ------------------------------------------------------------
+update.packages(repos = 'https://cloud.r-project.org/',
+  ask = FALSE
+  )

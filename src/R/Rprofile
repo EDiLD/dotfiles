@@ -1,1 +1,4 @@
 options(repos="https://cloud.r-project.org/") 
+.First <- function() {
+	.libPaths('/home/edisz/R/library/')
+}

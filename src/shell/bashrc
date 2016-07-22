@@ -53,12 +53,29 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+# if [ "$color_prompt" = yes ]; then
+#     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+# else
+#     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+# fi
+# unset color_prompt force_color_prompt
+
+# git branch in terminal
+# colors
+# GREEN="\[\033[0;32m\]"
+# LILA="\[\033[0;35m\]"
+# DEFAULT="\[\033[0m\]"
+
+parse_git_branch() {
+ git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+ PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]$(parse_git_branch)\[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+ PS1='${debian_chroot:+($debian_chroot)}\[\033[0;35m\]\u@\h:\w\[\033[0;32m\]$(parse_git_branch)\[\033[0m\]\$ '
 fi
-unset color_prompt force_color_prompt
+
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
@@ -114,27 +131,11 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 ### R_LIBS
-R_LIBS=$HOME/R_libs/all
+R_LIBS=$HOME/R/library
 export R_LIBS
 
-### prompt
-### show github branch
-# colors
-GREEN="\[\033[0;32m\]"
-LILA="\[\033[0;35m\]"
-DEFAULT="\[\033[0m\]"
-
-function parse_git_branch {
-	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \[\1\]/'
-}
-
-function proml { 
-	PS1="${LILA}\u@\h: \w${GREEN}\$(parse_git_branch)${DEFAULT}\$"
-}
-
-proml
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # added by travis gem
-[ -f /home/edisz/.travis/travis.sh ] && source /home/edisz/.travis/travis.sh
+[ -f "$HOME/.travis/travis.sh" ] && source "$HOME/.travis/travis.sh"

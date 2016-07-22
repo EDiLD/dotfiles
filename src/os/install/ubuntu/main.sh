@@ -233,6 +233,8 @@ main() {
     install_package "sublime-text" "sublime-text"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    # Teamviewer
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "thunderbird" "thunderbird"
 
@@ -263,7 +265,7 @@ main() {
 
     fi
     
-        install_package "tor-browser" "tor-browser"
+    install_package "tor-browser" "tor-browser"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -276,7 +278,7 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     # zotero
 
-    execute "./zotero/main.sh"
+    execute "zotero.sh"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

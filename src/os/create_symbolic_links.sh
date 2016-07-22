@@ -113,7 +113,8 @@ create_symlinks() {
 
     done
 
-    toother "xfce4/terminalrc" ".config/xfce4/terminal/terminalrc"
+    toother "xfce4/terminal/terminalrc" ".config/xfce4/terminal/terminalrc"
+    toother "xfce4/panel/whiskermenu-1.rc" ".config/xfce4/panel/whiskermenu-1.rc"
 }
 
 

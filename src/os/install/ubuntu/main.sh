@@ -121,11 +121,16 @@ main() {
     install_package "libcairo2" "libcairo2-dev"
     install_package "libgeos" "libgeos-dev"
     install_package "libgdal1h" "libgdal1h"
+    install_package "libgdal1-dev" "libgdal1-dev"
     install_package "libpq" "libpq-dev"
     install_package "libxml2" "libxml2-dev"
     install_package "mesa-common-dev" "mesa-common-dev"
     install_package "libglu1-mesa-dev" "libglu1-mesa-dev"
     install_package "freeglut3-dev" "freeglut3-dev"
+    install_package "libgsl0ldbl" "libgsl0ldbl"
+    install_package "libgtk2.0-dev" "libgtk2.0-dev"
+
+    
 
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -140,6 +145,10 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "nano" "nano"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    install_package "openbabel" "openbabel"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

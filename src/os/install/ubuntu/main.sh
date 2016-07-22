@@ -159,6 +159,22 @@ main() {
 
     install_package "openjdk7" "openjdk-7-jdk"
 
+       # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    if ! package_is_installed "owncloud-client"; then
+
+        add_key "http://download.opensuse.org/repositories/isv:ownCloud:desktop/Ubuntu_14.04/Release.key"
+
+        add_to_source_list "http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Ubuntu_14.10/ /" "owncloud-client.list" \
+            || print_error "Owncloud (add to package resource list)"
+
+        update &> /dev/null \
+            || print_error "Owncloud (resync package index files)"
+
+    fi
+
+    install_package "Owncloud" "owncloud-client"
+
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "pandoc" "pandoc"
@@ -254,6 +270,11 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "VLC" "vlc"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    # zotero
+
+
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

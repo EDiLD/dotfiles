@@ -237,7 +237,6 @@ main() {
 
     wget -qO - "https://download.teamviewer.com/download/teamviewer_i386.deb" | sudo dpkg -i &> /dev/null
 
-
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "thunderbird" "thunderbird"
@@ -282,7 +281,7 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     # zotero
 
-    execute "zotero.sh"
+    execute "./zotero.sh"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

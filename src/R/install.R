@@ -59,7 +59,7 @@ bioc_pkg <- bioc_pkg[!(bioc_pkg %in% inst_pkg)]
 
 if (length(bioc_pkg) > 0) {
        source("https://bioconductor.org/biocLite.R")
-       biocLite(bioc_plg)
+       biocLite(bioc_pkg)
 }
 # Update existing ------------------------------------------------------------
 update.packages(repos = 'https://cloud.r-project.org/',

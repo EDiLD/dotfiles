@@ -101,6 +101,10 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    install_package "JAGS" "jags"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
     install_package "Beamer" "latex-beamer"
     install_package "latexdiff" "latexdiff"
     install_package "latexmk" "latexmk"
@@ -108,6 +112,17 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "leafpad" "leafpad"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    install_package "libssl" "libssl-dev"
+    install_package "libcurl" "libcurl4-openssl-dev"
+    install_package "libcairo" "libcairo-dev"
+    install_package "libgdal1h" "libgdal1h"
+    install_package "libpq" "libpq-dev"
+    install_package "libxml2" "libxml2-dev"
+
+
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "writer2latex" "libreoffice-writer2latex"
@@ -120,6 +135,10 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "nano" "nano"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    install_package "openjdk7" "openjdk-7-jdk"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

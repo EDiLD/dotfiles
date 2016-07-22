@@ -205,11 +205,13 @@ main() {
     if [ ! -d "/usr/share/fonts/opentype" ]; then
         execute \
             "[ -d /usr/share/fonts/opentype ] || sudo mkdir -p /usr/share/fonts/opentype" \
-            "Install Source Code Pro"
+            "Source Code Pro"
         execute \
             "sudo git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git /usr/share/fonts/opentype/scp" \
              "clone repo"
         execute "sudo fc-cache -f -v" "update cache"
+    else
+        print_success "Source Code Pro"
     fi
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -249,7 +251,6 @@ main() {
     if ! package_is_installed "tor-browser"; then
         add_ppa "webupd8team/tor-browser"
         update
-
     fi
     
     install_package "tor-browser" "tor-browser"

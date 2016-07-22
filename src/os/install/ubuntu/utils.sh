@@ -77,39 +77,40 @@ install_zotero() {
     MENU_PATH="/usr/share/applications/zotero.desktop"
     MENU_DIR="/usr/share/applications"
 
-    URL="http://download.zotero.org/standalone/$VERSION/Zotero-${VERSION}_linux-$ARCH.tar.bz2"
-
-    wget $URL -O $TMP
-
     if [ -d $DEST/$DEST_FOLDER ]; then
         print_success "Zotero"
+
+    else
+
+        URL="http://download.zotero.org/standalone/$VERSION/Zotero-${VERSION}_linux-$ARCH.tar.bz2"
+        wget $URL -O $TMP
+        sudo tar -xpf $TMP -C $DEST
+        sudo mv $DEST/Zotero_linux-$ARCH $DEST/$DEST_FOLDER
+
+        if [ -f $MENU_DIR ]; then
+            sudo mkdir $MENU_DIR
+        fi
+        sudo sh -c "echo '[Desktop Entry]
+        Name=Zotero
+        Comment=Open-source reference manager (standalone version)
+        Exec=$DEST/$DEST_FOLDER/zotero
+        Icon=accessories-dictionary
+        Type=Application
+        StartupNotify=true' > $MENU_PATH"
     fi
-
-    sudo tar -xpf $TMP -C $DEST
-
-    sudo mv $DEST/Zotero_linux-$ARCH $DEST/$DEST_FOLDER
-
-    if [ -f $MENU_DIR ]; then
-        sudo mkdir $MENU_DIR
-    fi
-
-    sudo sh -c "echo '[Desktop Entry]
-    Name=Zotero
-    Comment=Open-source reference manager (standalone version)
-    Exec=$DEST/$DEST_FOLDER/zotero
-    Icon=accessories-dictionary
-    Type=Application
-    StartupNotify=true' > $MENU_PATH"
 }
 
 install_dropbox() {
-    if [ `uname -m` == "x86_64" ]; then
-        execute 'cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -' 'Dropbox'
+    if [ -d '~/.dropbox-dist/dropboxd' ]; then
+        print_success "Dropbox"
     else
-        execute 'cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86" | tar xzf -' 'Dropbox'
+        if [ `uname -m` == "x86_64" ]; then
+            execute 'cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -' 'Dropbox'
+        else
+            execute 'cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86" | tar xzf -' 'Dropbox'
+        fi
+        ~/.dropbox-dist/dropboxd &
     fi
-    ~/.dropbox-dist/dropboxd &
-
 }
 
 package_is_installed() {

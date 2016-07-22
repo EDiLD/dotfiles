@@ -108,7 +108,7 @@ install_dropbox() {
     else
         execute 'cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86" | tar xzf -' 'Dropbox'
     fi
-    ~/.dropbox-dist/dropboxd
+    ~/.dropbox-dist/dropboxd &
 
 }
 

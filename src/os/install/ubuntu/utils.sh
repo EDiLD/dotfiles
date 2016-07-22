@@ -134,6 +134,13 @@ install_greybird() {
 
         # update icon cache (optional)
         gtk-update-icon-cache-3.0 -f -t ~/.icons
+
+        print_in_yellow "Go to Appearance > Style tab. Select Greybird master.
+        Go to Appearance > Icons tab. Select elementary xfce dark or whatever you like.
+        Go to Window Manager > Style tab. Select Greybird master.
+        Done?"
+
+        ask_for_confirmation
     fi
 }
 

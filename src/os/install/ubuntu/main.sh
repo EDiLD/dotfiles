@@ -117,10 +117,13 @@ main() {
 
     install_package "libssl" "libssl-dev"
     install_package "libcurl" "libcurl4-openssl-dev"
-    install_package "libcairo" "libcairo-dev"
+    install_package "libcairo" "libcairo2"
+    install_package "libcairo2" "libcairo2-dev"
+    install_package "libgeos" "libgeos-dev"
     install_package "libgdal1h" "libgdal1h"
     install_package "libpq" "libpq-dev"
     install_package "libxml2" "libxml2-dev"
+    install_package "mesa-common-dev" "mesa-common-dev"
 
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -185,7 +188,7 @@ main() {
     [ -d /usr/share/fonts/opentype ] || sudo mkdir /usr/share/fonts/opentype
     sudo git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git /usr/share/fonts/opentype/scp
     sudo fc-cache -f -v
-    
+
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "sublime-text" "sublime-text"

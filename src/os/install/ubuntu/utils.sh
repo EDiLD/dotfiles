@@ -32,6 +32,22 @@ autoremove() {
 
 }
 
+install_url() {
+
+    declare -r PACKAGE="$2"
+    declare -r PACKAGE_READABLE_NAME="$1"
+    declare -r URL="$3"
+    FILE=`mktemp` 
+
+    if ! package_is_installed "$PACKAGE"; then
+        execute 'wget "$URL" -qO $FILE && sudo dpkg -i $FILE' "$PACKAGE_READABLE_NAME"
+        rm $FILE
+    else
+        print_success "$PACKAGE_READABLE_NAME"
+    fi
+
+}
+
 install_package() {
 
     declare -r PACKAGE="$2"

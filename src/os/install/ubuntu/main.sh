@@ -235,7 +235,7 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     # Teamviewer
 
-    wget -qO - "https://download.teamviewer.com/download/teamviewer_i386.deb" | sudo dpkg -i &> /dev/null
+    install_url "Teamviewer" "teamviewer" "https://download.teamviewer.com/download/teamviewer_i386.deb"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

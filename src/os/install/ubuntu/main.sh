@@ -124,6 +124,8 @@ main() {
     install_package "libpq" "libpq-dev"
     install_package "libxml2" "libxml2-dev"
     install_package "mesa-common-dev" "mesa-common-dev"
+    install_package "libglu1-mesa-dev" "libglu1-mesa-dev"
+    install_package "freeglut3-dev" "freeglut3-dev"
 
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

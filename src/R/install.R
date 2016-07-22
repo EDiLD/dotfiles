@@ -40,6 +40,7 @@ if (length(cran_pkg) > 0) {
 
 # github ------------------------------------------------------------------
 message('Installing github packages...')
+library(devtools)
 # installed packages
 inst_pkg <- installed.packages()[,"Package"]
 

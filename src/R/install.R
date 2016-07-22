@@ -36,12 +36,14 @@ if (length(cran_pkg) > 0) {
                  repos = 'https://cloud.r-project.org/')
 }
 
-
-install.packages("glmmADMB", 
+if  (!'glmmADMB' %in% inst_pkg) {
+  install.packages("glmmADMB", 
     repos=c("http://glmmadmb.r-forge.r-project.org/repos",
             getOption("repos")),
     type="source",
     lib = '~/R/library')
+}
+
 
 
 # github ------------------------------------------------------------------

@@ -53,22 +53,6 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    if ! package_is_installed "dropbox"; then
-
-        sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 5044912E  
-
-        add_to_source_list "[arch=i386,amd64] http://linux.dropbox.com/ubuntu trusty main" "dropbox.list" \
-            || print_error "dropbox (add to package resource list)"
-
-        update &> /dev/null \
-            || print_error "dropbox (resync package index files)"
-
-    fi
-
-    install_package "dropbox" "dropbox"
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
     install_package "enigmail" "enigmail"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -282,6 +266,11 @@ main() {
     # zotero
 
     execute 'install_zotero' 'Zotero'
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    install_dropbox
+
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     print_in_green "\n  ---\n\n"

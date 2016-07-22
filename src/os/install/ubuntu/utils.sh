@@ -102,6 +102,16 @@ install_zotero() {
     StartupNotify=true' > $MENU_PATH"
 }
 
+install_dropbox() {
+    if [ `uname -m` == "x86_64" ]; then
+        execute 'cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -' 'Dropbox'
+    else
+        execute 'cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86" | tar xzf -' 'Dropbox'
+    fi
+    ~/.dropbox-dist/dropboxd
+
+}
+
 package_is_installed() {
     dpkg -s "$1" &> /dev/null
 }

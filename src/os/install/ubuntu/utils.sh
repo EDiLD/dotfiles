@@ -18,7 +18,7 @@ add_ppa() {
 }
 
 add_to_source_list() {
-    sudo sh -c "printf 'deb $1' >> '/etc/apt/sources.list.d/$2'"
+    sudo sh -c "printf 'deb $1' > '/etc/apt/sources.list.d/$2'"
 }
 
 autoremove() {
@@ -93,13 +93,13 @@ install_zotero() {
         sudo mkdir $MENU_DIR
     fi
 
-    echo "[Desktop Entry]
+    sudo sh -c "echo '[Desktop Entry]
     Name=Zotero
     Comment=Open-source reference manager (standalone version)
     Exec=$DEST/$DEST_FOLDER/zotero
     Icon=accessories-dictionary
     Type=Application
-    StartupNotify=true" > $MENU_PATH
+    StartupNotify=true' > $MENU_PATH"
 }
 
 package_is_installed() {

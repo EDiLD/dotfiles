@@ -234,6 +234,10 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     # Teamviewer
+
+    wget -qO - "https://download.teamviewer.com/download/teamviewer_i386.deb" | sudo dpkg -i &> /dev/null
+
+
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "thunderbird" "thunderbird"

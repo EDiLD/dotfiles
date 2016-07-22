@@ -122,6 +122,8 @@ main() {
     install_package "libgeos" "libgeos-dev"
     install_package "libgdal1h" "libgdal1h"
     install_package "libgdal1-dev" "libgdal1-dev"
+    install_package "libproj-dev" "libproj-dev"
+    install_package "libgsl0-dev" "libgsl0-dev"
     install_package "libpq" "libpq-dev"
     install_package "libxml2" "libxml2-dev"
     install_package "mesa-common-dev" "mesa-common-dev"
@@ -149,6 +151,9 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "openbabel" "openbabel"
+    install_package "libopenbabel4" "libopenbabel4"
+    install_package "openbabel-gui" "openbabel-gui"
+    install_package "python-openbabel" "python-openbabel"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

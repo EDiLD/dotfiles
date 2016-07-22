@@ -69,6 +69,12 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    install_package "gtk2-engines-murrine" "gtk2-engines-murrine"
+    install_package "gtk3-engines-unico" "gtk3-engines-unico"
+    install_greybird
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
     install_package "GIMP" "gimp"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

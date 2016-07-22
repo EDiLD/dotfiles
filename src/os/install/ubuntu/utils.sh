@@ -85,12 +85,12 @@ install_zotero() {
         print_success "Zotero"
     fi
 
-    tar -xpf $TMP -C $DEST
+    sudo tar -xpf $TMP -C $DEST
 
-    mv $DEST/Zotero_linux-$ARCH $DEST/$DEST_FOLDER
+    sudo mv $DEST/Zotero_linux-$ARCH $DEST/$DEST_FOLDER
 
     if [ -f $MENU_DIR ]; then
-        mkdir $MENU_DIR
+        sudo mkdir $MENU_DIR
     fi
 
     echo "[Desktop Entry]

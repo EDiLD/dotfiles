@@ -107,6 +107,9 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    install_package "leafpad" "leafpad"
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
     install_package "writer2latex" "libreoffice-writer2latex"
     install_package "presenter-console" "libreoffice-presenter-console"
 

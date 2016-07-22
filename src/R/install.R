@@ -1,4 +1,6 @@
 
+# installed packages
+inst_pkg <- installed.packages()[,"Package"]
 # CRAN --------------------------------------------------------------------
 message('Installing CRAN packages...')
 cran_pkg <- c("devtools", "bit64", "boot", 'Cairo', 'cairoDevice', 'car',
@@ -25,20 +27,37 @@ cran_pkg <- c("devtools", "bit64", "boot", 'Cairo', 'cairoDevice', 'car',
               'taxize', 'testthat', 'tikzDivice', 'timeSeries',
               'tm', 'tseries', 'vegan', 'VGAM', 'vioplot', 'webchem',
               'xml2', 'xkcd', 'xtable', 'zoo')
-install.packages(cran_pkg, 
+
+cran_pkg <- cran_pkg[!(cran_pkg %in% inst_pkg)]
+if (length(cran_pkg) > 0) {
+       install.packages(cran_pkg, 
                   lib = '~/R/library',
                  dependencies = TRUE, 
                  repos = 'https://cloud.r-project.org/')
+}
+
 
 
 # github ------------------------------------------------------------------
 message('Installing github packages...')
+# installed packages
+inst_pkg <- installed.packages()[,"Package"]
+
 git_pkg <- c('EDiLD/esmisc')
-library(devtools)
-lapply(git_pkg, function(y) install_github(repo = y) )
+git_pkg <- git_pkg[!(git_pkg %in% inst_pkg)]
+if (length(git_pkg) > 0 & 'devtools' %in% inst_pkg) {
+       lapply(git_pkg, function(y) install_github(repo = y) )
+}
+
+
   
 
 # BioConductor ------------------------------------------------------------
 message('Installing BioConductor packages...')
 bioc_pkg <- c('ChemmineR', 'ChemmineOB')
-biocLite(bioC)
+bioc_pkg <- bioc_pkg[!(bioc_pkg %in% inst_pkg)]
+
+if (length(bioc_pkg) > 0) {
+       source("https://bioconductor.org/biocLite.R")
+       biocLite(bioc_plg)
+}

@@ -113,7 +113,8 @@ main() {
         execute \
             "git fetch --all \
             && git reset --hard origin/master \
-            && git clean -fd" \
+            && git clean -fd \
+            && git push --set-upstream origin master" \
             "Update content"
 
     fi

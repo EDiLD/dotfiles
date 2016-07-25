@@ -287,6 +287,15 @@ main() {
     install_dropbox
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    print_in_yellow "Copy Thunderbird Profiles.
+    Done?"
+    ask_for_confirmation
+
+    print_in_yellow "Copy Firefox settings (addons, blog/feeds, bookmarks).
+    Done?"
+    ask_for_confirmation
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     print_in_green "\n  ---\n\n"
     update

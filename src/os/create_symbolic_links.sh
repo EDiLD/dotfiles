@@ -93,6 +93,8 @@ create_symlinks() {
 
         "R/Rprofile"
 
+        "pgadmin/pgadmin3"
+
     )
 
     local i=""

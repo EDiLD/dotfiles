@@ -113,37 +113,6 @@ install_dropbox() {
     fi
 }
 
-install_greybird() {
-    if [ -d '$HOME/.themes' ]; then
-        print_success "Greybird"
-    else
-        # Install theme
-        mkdir -p '$HOME/.themes'
-        cd '$HOME/.themes'
-        wget https://github.com/shimmerproject/Greybird/archive/master.zip
-        unzip master.zip
-        rm master.zip
-
-        # Install Icons
-        mkdir -p '$HOME/.icons'
-        cd '$HOME/.icons'
-        wget https://github.com/shimmerproject/elementary-xfce/archive/master.zip
-        unzip master.zip
-        mv elementary*/* .
-        rm master.zip
-
-        # update icon cache (optional)
-        gtk-update-icon-cache-3.0 -f -t ~/.icons
-
-        print_in_yellow "Go to Appearance > Style tab. Select Greybird master.
-        Go to Appearance > Icons tab. Select elementary xfce dark or whatever you like.
-        Go to Window Manager > Style tab. Select Greybird master.
-        Done?"
-
-        ask_for_confirmation
-    fi
-}
-
 package_is_installed() {
     dpkg -s "$1" &> /dev/null
 }

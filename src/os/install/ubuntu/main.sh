@@ -69,9 +69,13 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    install_package "gtk2-engines-murrine" "gtk2-engines-murrine"
-    install_package "gtk3-engines-unico" "gtk3-engines-unico"
-    install_greybird
+    install_package "shimmer-themes" "shimmer-themes"
+    install_package "elementary-icon-theme" "elementary-icon-theme"
+    print_in_yellow "Go to Appearance > Style tab. Select Greybird.
+        Go to Appearance > Icons tab. Select elementary xfce dark or whatever you like.
+        Go to Window Manager > Style tab. Select Greybird master.
+        Done?"
+    ask_for_confirmation
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -219,10 +223,6 @@ main() {
     else
         print_success "Source Code Pro"
     fi
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    install_package "shimmer-themes" "shimmer-themes"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

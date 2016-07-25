@@ -1,0 +1,7 @@
+{
+    "cmd": ["latexmk -pdf -xelatex -silent -interaction=nonstopmode $file_name | grep -i -E \"warn|!\" && open $file_base_name.pdf"],
+    "shell": true,
+    "path": "$PATH:/usr/bin:/usr/local/bin:/opt/local/bin",
+    "file_regex": "^(…*?):([0-9]*):?([0-9]*)",
+    "selector": "text.tex.latex"
+}

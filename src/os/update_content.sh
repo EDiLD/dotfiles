@@ -110,12 +110,10 @@ main() {
         ssh -T git@github.com &> /dev/null
         [ $? -ne 1 ] && set_github_ssh_key
 
-        execute \
-            "git fetch --all \
-            && git reset --hard origin/master \
-            && git clean -fd \
-            && git push --set-upstream origin master" \
-            "Update content"
+        git fetch --all 
+        git reset --hard origin/master 
+        git clean -fd 
+        git push --set-upstream origin master
 
     fi
 

@@ -19,7 +19,7 @@
 	[
 		80
 	],
-	"show_encoding":true,
+	"show_encoding": true,
 	"spell_check": true,
 	"word_wrap": true,
 	"wrap_width": 80

@@ -153,11 +153,16 @@ main() {
     install_package "openbabel-gui" "openbabel-gui"
     install_package "python-openbabel" "python-openbabel"
 
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    install_package "ocrmypdf" "ocrmypdf"
+
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "openjdk7" "openjdk-7-jdk"
 
-       # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     if ! package_is_installed "owncloud-client"; then
 

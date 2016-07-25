@@ -1,0 +1,24 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Auto Hide Sidebar",
+		"GitGutter",
+		"knitr",
+		"LaTeXing",
+		"Package Control",
+		"PackageSync",
+		"PlainTasks",
+		"R-Box",
+		"SendTextPlus",
+		"SideBarEnhancements",
+		"SublimeGit",
+		"SublimeREPL",
+		"Sunrise Theme",
+		"Theme - Bamboo",
+		"Theme - Soda"
+	]
+}

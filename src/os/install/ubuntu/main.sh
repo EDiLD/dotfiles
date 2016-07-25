@@ -71,11 +71,14 @@ main() {
 
     install_package "shimmer-themes" "shimmer-themes"
     install_package "elementary-icon-theme" "elementary-icon-theme"
-    print_in_yellow "Go to Appearance > Style tab. Select Greybird.
-        Go to Appearance > Icons tab. Select elementary xfce dark or whatever you like.
-        Go to Window Manager > Style tab. Select Greybird master.
-        Done?"
-    ask_for_confirmation
+    if ! package_is_installed "elementary-icon-theme"; then
+        print_in_yellow "Go to Appearance > Style tab. Select Greybird.
+            Go to Appearance > Icons tab. Select elementary xfce dark or whatever you like.
+            Go to Window Manager > Style tab. Select Greybird master.
+            Done?"
+        ask_for_confirmation
+    fi
+
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

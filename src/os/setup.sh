@@ -225,13 +225,6 @@ main() {
 
     ./create_directories.sh
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    if ! $skipQuestions; then
-        ./create_symbolic_links.sh
-    else
-        ./create_symbolic_links.sh -y
-    fi
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -240,6 +233,14 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     ./preferences/main.sh
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    if ! $skipQuestions; then
+        ./create_symbolic_links.sh
+    else
+        ./create_symbolic_links.sh -y
+    fi
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

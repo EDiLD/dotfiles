@@ -111,8 +111,9 @@ main() {
         [ $? -ne 1 ] && set_github_ssh_key
 
         # Update content and remove untracked files
-        execute  "git fetch --all"             "Updatet"
-        execute "git reset --hard origin/master && git clean -fd" "clean"
+        execute  "git fetch --all"             "fetch"
+        execute "git reset --hard origin/master" "reset"
+        execute "git clean -fd" "clean"
 
     fi
 

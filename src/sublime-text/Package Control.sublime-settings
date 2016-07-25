@@ -5,20 +5,22 @@
 	],
 	"installed_packages":
 	[
-		"Auto Hide Sidebar",
 		"GitGutter",
 		"knitr",
 		"LaTeXing",
 		"Package Control",
 		"PackageSync",
 		"PlainTasks",
+		"PostgreSQL Syntax Highlighting",
 		"R-Box",
 		"SendTextPlus",
 		"SideBarEnhancements",
+		"SQLExec",
 		"SublimeGit",
 		"SublimeREPL",
 		"Sunrise Theme",
 		"Theme - Bamboo",
-		"Theme - Soda"
+		"Theme - Soda",
+		"WordCount"
 	]
 }

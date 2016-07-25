@@ -7,7 +7,7 @@
 	"fade_fold_buttons": false,
 	"find_selected_text": true,
 	"font_face": "Source Code Pro",
-	"font_size": 10,
+	"font_size": 9,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
@@ -19,6 +19,7 @@
 	[
 		80
 	],
+	"show_encoding":true,
 	"spell_check": true,
 	"word_wrap": true,
 	"wrap_width": 80

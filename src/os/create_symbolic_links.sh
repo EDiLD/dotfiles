@@ -115,8 +115,8 @@ create_symlinks() {
 
     toother "xfce4/terminal/terminalrc" ".config/xfce4/terminal/terminalrc"
     toother "xfce4/panel/whiskermenu-1.rc" ".config/xfce4/panel/whiskermenu-1.rc"
-    toother "sublime-text/Package Control.sublime-settings" "/home/user/.config/sublime-text-3/Packages/User/Package Control.sublime-settings"
-    toother "sublime-text/Preferences.sublime-settings" "/home/user/.config/sublime-text-3/Packages/User/Preferences.sublime-settings"
+    toother "sublime-text/Package Control.sublime-settings" ".config/sublime-text-3/Packages/User/Package Control.sublime-settings"
+    toother "sublime-text/Preferences.sublime-settings" ".config/sublime-text-3/Packages/User/Preferences.sublime-settings"
 
 }
 

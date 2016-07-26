@@ -94,6 +94,10 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    install_package "indicator-multiload" "indicator-multiload"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
     install_package "ImageMagick" "imagemagick"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

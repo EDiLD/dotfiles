@@ -73,6 +73,10 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    install_package "gnome-system-monitor" "gnome-system-monitor"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
     install_package "shimmer-themes" "shimmer-themes"
     install_package "elementary-icon-theme" "elementary-icon-theme"
     if ! package_is_installed "elementary-icon-theme"; then

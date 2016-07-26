@@ -1,4 +1,5 @@
 options(repos="https://cloud.r-project.org/") 
 .First <- function() {
 	.libPaths('~/R/library/')
+	Sys.setenv(R_LIBS=.libPaths()[1])  
 }

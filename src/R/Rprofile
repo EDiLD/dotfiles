@@ -1,5 +1,5 @@
-options(repos=c(CRAN="https://cran.rstudio.com/"))
+options(repos = c(CRAN = "https://cran.rstudio.com/"))
 .First <- function() {
 	.libPaths('~/R/library/')
-	Sys.setenv(R_LIBS=.libPaths()[1])  
+	Sys.setenv(R_LIBS = .libPaths()[1])  
 }

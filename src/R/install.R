@@ -24,7 +24,7 @@ cran_pkg <- c("devtools", "bit64", "boot", 'Cairo', 'cairoDevice', 'car',
               'rpubchem', 'rstan', 'rvest', 'sandwich', 
               'scales', 'simecol', 'rodeo', 'sp', 'spatial', 
               'spatstat', 'SSN', 'stringr', 'stringdist', 
-              'survreg', 'svglite',
+              'survival', 'svglite',
               'taxize', 'testthat', 'tikzDevice', 'timeSeries',
               'tm', 'tseries', 'vegan', 'VGAM', 'vioplot', 'webchem',
               'xml2', 'xkcd', 'xtable', 'zoo')

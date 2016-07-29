@@ -157,6 +157,12 @@ main() {
 
     install_package "nano" "nano"
 
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    install_package "npm" "npm"
+    execute "sudo npm install -g duereg/write-gooder"
+
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "openbabel" "openbabel"

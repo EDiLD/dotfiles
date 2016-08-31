@@ -2,11 +2,14 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
+		"0_package_control_loader",
+		"GitGutter"
 	],
 	"installed_packages":
 	[
 		"GitGutter",
 		"knitr",
+		"LanguageTool",
 		"LaTeXing",
 		"Package Control",
 		"PackageSync",

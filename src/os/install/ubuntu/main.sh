@@ -162,7 +162,8 @@ main() {
 
     install_package "npm" "npm"
     execute "sudo npm install -g duereg/write-gooder"
-
+    execute "sudo ln -s /usr/bin/nodejs /usr/bin/node"
+    
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "openbabel" "openbabel"
@@ -308,6 +309,11 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_dropbox
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    install_gis
+
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     print_in_yellow "Copy Thunderbird Profiles.

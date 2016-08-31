@@ -113,6 +113,19 @@ install_dropbox() {
     fi
 }
 
+install_gis() {
+
+    if ! package_is_installed "qgis"; then
+        execute "sudo add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable"
+        update
+        execute "sudo apt-get install --allow-unauthenticated -qqy qgis" "qgis"
+        execute "sudo apt-get install --allow-unauthenticated -qqy grass" "grass"        
+    else
+        print_success "qgis"
+    fi
+
+}
+
 package_is_installed() {
     dpkg -s "$1" &> /dev/null
 }

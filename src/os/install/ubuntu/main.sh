@@ -251,6 +251,13 @@ main() {
         print_success "Source Code Pro"
     fi
 
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    install_package "ruby2.0" "ruby2.0"
+    execute "sudo gem2.0 install jekyll" "Installing Jekyll"
+    execute "sudo gem2.0 install github-pages" "Install github-pages gem"
+
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "sublime-text" "sublime-text"

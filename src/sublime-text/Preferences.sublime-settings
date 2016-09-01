@@ -16,8 +16,6 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"0_package_control_loader",
-		"GitGutter",
 		"Vintage"
 	],
 	"overlay_scroll_bars": "enabled",

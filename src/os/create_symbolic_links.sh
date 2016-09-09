@@ -95,6 +95,8 @@ create_symlinks() {
 
         "pgadmin/pgadmin3"
 
+        "zsh/zshrc"
+
     )
 
     local i=""

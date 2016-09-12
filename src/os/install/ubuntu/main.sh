@@ -326,6 +326,10 @@ main() {
 
     install_gis
 
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    install_z
+
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     print_in_yellow "Copy Thunderbird Profiles.

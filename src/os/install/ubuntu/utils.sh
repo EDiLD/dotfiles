@@ -127,6 +127,10 @@ install_gis() {
 
 }
 
+install_z() {
+    execute "wget https://raw.githubusercontent.com/rupa/z/master/z.sh -O ~/z.sh" "Download z"
+}
+
 package_is_installed() {
     dpkg -s "$1" &> /dev/null
 }

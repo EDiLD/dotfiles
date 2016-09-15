@@ -124,8 +124,22 @@ install_gis() {
     else
         print_success "qgis"
     fi
-
 }
+
+install_photo() {
+
+    execute "sudo add-apt-repository -y ppa:dhor/myway"
+    update
+    execute "sudo apt-get install --allow-unauthenticated -qqy rawtherapee" "rawtherapee" 
+    execute "sudo apt-get install --allow-unauthenticated -qqy hdrmerge" "hdrmerge"  
+    execute "sudo apt-get install --allow-unauthenticated -qqy luminance-hdr" "luminance-hdr" 
+    execute "sudo add-apt-repository -y ppa:hugin/hugin-builds"
+    update
+    execute "sudo apt-get install --allow-unauthenticated -qqy hugin enblend" "hugin" 
+    execute "sudo add-apt-repository -y ppa:pmjdebruijn/darktable-release"
+    update
+    execute "sudo apt-get install --allow-unauthenticated -qqy darktable" "darktable" 
+    }
 
 install_z() {
     execute "wget https://raw.githubusercontent.com/rupa/z/master/z.sh -O ~/z.sh" "Download z"

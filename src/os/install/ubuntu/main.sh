@@ -179,6 +179,10 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    install_package "ocular" "ocular"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
     install_package "openjdk7" "openjdk-7-jdk"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

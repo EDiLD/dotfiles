@@ -66,6 +66,5 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias gaa='git add --all'
-alias gcm='git commit -m'
 alias gf='git fetch --all'
 alias gp='git push'

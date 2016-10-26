@@ -21,7 +21,7 @@ cran_pkg <- c("devtools", "bit64", "boot", 'Cairo', 'cairoDevice', 'car',
               'Rcpp', 'RCurl', 'readxl', 'relaimpo', 'reshape2',
               'rgdal', 'rgeos', 'rgl', 'rgrass7', 'rjags', 
               'rJava', 'rmarkdown', 'roxygen2', 'RPostgreSQL',
-              'rpubchem', 'rstan', 'rvest', 'sandwich', 
+              'rpubchem', 'rstan', 'rvest', 'sandwich', 'setwidth',
               'scales', 'simecol', 'rodeo', 'sp', 'spatial', 
               'spatstat', 'spsurvey', 'SSN', 'stringr', 'stringdist', 
               'survival', 'svglite',
@@ -53,7 +53,7 @@ library(devtools)
 # installed packages
 inst_pkg <- installed.packages()[,"Package"]
 
-git_pkg <- c('EDiLD/esmisc')
+git_pkg <- c('EDiLD/esmisc', 'jalvesaq/colorout')
 git_pkg <- git_pkg[!(git_pkg %in% inst_pkg)]
 if (length(git_pkg) > 0 & 'devtools' %in% inst_pkg) {
        lapply(git_pkg, function(y) install_github(repo = y) )

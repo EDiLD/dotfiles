@@ -1,5 +1,12 @@
 options(repos = c(CRAN = "https://cran.rstudio.com/"))
+
 .First <- function() {
 	.libPaths('~/R/library/')
 	Sys.setenv(R_LIBS = .libPaths()[1])  
+}
+
+if (interactive()) {
+  # if used in a terminal
+  library(colorout)
+  library(setwidth)
 }

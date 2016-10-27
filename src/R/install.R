@@ -4,7 +4,8 @@ inst_pkg <- installed.packages()[,"Package"]
 # CRAN --------------------------------------------------------------------
 message('Installing CRAN packages...')
 cran_pkg <- c("devtools", "bit64", "boot", 'Cairo', 'cairoDevice', 'car',
-              'caret','censReg', 'cluster', 'coin', 'contrast', 'covr', 
+              'caret','censReg', 'cluster', 'crayon', 'coin', 'contrast', 
+              'covr', 
               'DAAG', 'data.table', 'DEoptim', 'deSolve', 
               'drc', 'drm', 'fitdistrplus', 'flexsurv', 
               'fortunes', 'gamlss', 'gamlss.add', 'gamlss.cens',
@@ -13,7 +14,7 @@ cran_pkg <- c("devtools", "bit64", "boot", 'Cairo', 'cairoDevice', 'car',
               'GUTS', 'Hmisc', 'httr', 'indicspecies',
               'jpeg', 'knitr', 'knitcitations', 'labdsv', 'leaps', 'lme4',
               'lmerTest', 'lmtest', 'lsmeans', 'lubridate', 
-              'maptools', 'markdown', 'MASS', 'MARSS', 'mclust',
+              'maptools', 'markdown', 'MASS', 'MARSS', 'mclust', 'memuse', 
               'mgcv', 'microbenchmark', 'multcomp', 'MuMIn',
               'mvabund', 'mvtnorm', 'NADA', 'nlme', 'nlstools', 'parallel',
               'pbkrtest', 'permute', 'plotrix', 'png', 'profr',
@@ -53,7 +54,7 @@ library(devtools)
 # installed packages
 inst_pkg <- installed.packages()[,"Package"]
 
-git_pkg <- c('EDiLD/esmisc', 'jalvesaq/colorout')
+git_pkg <- c('EDiLD/esmisc', 'gaborcsardi/prompt')
 git_pkg <- git_pkg[!(git_pkg %in% inst_pkg)]
 if (length(git_pkg) > 0 & 'devtools' %in% inst_pkg) {
        lapply(git_pkg, function(y) install_github(repo = y) )

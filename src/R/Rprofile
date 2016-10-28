@@ -1,12 +1,14 @@
-if (interactive()) {
-    # Dynamic R Prompt, see https://github.com/gaborcsardi/prompt
-    library(prompt)
-    set_prompt(prompt_fancy)
-}
-
-options(repos = c(CRAN = "https://cran.rstudio.com/"))
-
 .First <- function() {
 	.libPaths('~/R/library/')
 	Sys.setenv(R_LIBS = .libPaths()[1])  
+	if (interactive()) {
+	    # Dynamic R Prompt, see https://github.com/gaborcsardi/prompt
+	    library(prompt)
+	    set_prompt(prompt_fancy)
+	}
 }
+
+
+
+
+options(repos = c(CRAN = "https://cran.rstudio.com/"))

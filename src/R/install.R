@@ -54,7 +54,7 @@ library(devtools)
 # installed packages
 inst_pkg <- installed.packages()[,"Package"]
 
-git_pkg <- c('EDiLD/esmisc', 'gaborcsardi/prompt')
+git_pkg <- c('EDiLD/esmisc', 'gaborcsardi/prompt', 'gaborcsardi/parr')
 git_pkg <- git_pkg[!(git_pkg %in% inst_pkg)]
 if (length(git_pkg) > 0 & 'devtools' %in% inst_pkg) {
        lapply(git_pkg, function(y) install_github(repo = y) )

@@ -3,12 +3,18 @@
 	Sys.setenv(R_LIBS = .libPaths()[1])  
 	if (interactive()) {
 	    # Dynamic R Prompt, see https://github.com/gaborcsardi/prompt
-	    library(prompt)
+	    library("prompt")
 	    set_prompt(prompt_fancy)
+	    library("gitty")
 	}
 }
 
-
-
-
+# set default CRAN mirror
 options(repos = c(CRAN = "https://cran.rstudio.com/"))
+
+# override q(), so that it doesn't ask to save workspace
+library("utils")
+assignInNamespace("q", 
+	function(save = "no", status = 0, runLast = TRUE) {
+		.Internal(quit(save, status, runLast))
+	}, "base")

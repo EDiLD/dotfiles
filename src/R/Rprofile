@@ -1,7 +1,7 @@
 .First <- function() {
 	.libPaths('~/R/library/')
 	Sys.setenv(R_LIBS = .libPaths()[1])  
-	if (interactive()) {
+	if (interactive() & Sys.getenv("RSTUDIO") != 1) {
 	    # Dynamic R Prompt, see https://github.com/gaborcsardi/prompt
 	    library("prompt")
 	    library("clisymbols")

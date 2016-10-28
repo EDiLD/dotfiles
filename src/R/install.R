@@ -5,8 +5,7 @@ inst_pkg <- installed.packages()[,"Package"]
 message('Installing CRAN packages...')
 cran_pkg <- c("devtools", "bit64", "boot", 'Cairo', 'cairoDevice', 'car',
               'caret','censReg', 'clisymbols', 
-              'cluster', 'crayon', 'coin', 'contrast', 
-              'covr', 
+              'cluster', 'crayon', 'coin', 'contrast', 'covr', 
               'DAAG', 'data.table', 'DEoptim', 'deSolve', 
               'drc', 'drm', 'fitdistrplus', 'flexsurv', 
               'fortunes', 'gamlss', 'gamlss.add', 'gamlss.cens',

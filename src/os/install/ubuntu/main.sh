@@ -130,7 +130,7 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "writer2latex" "libreoffice-writer2latex"
-    install_package "presenter-console" "libreoffice-presenter-console"
+    install_package "pdf-presenter-console" "pdf-presenter-console"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -144,7 +144,6 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "openbabel" "openbabel"
-    install_package "libopenbabel4" "libopenbabel4"
     install_package "libopenbabel-dev" "libopenbabel-dev"
     install_package "openbabel-gui" "openbabel-gui"
     install_package "python-openbabel" "python-openbabel"
@@ -156,11 +155,11 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    install_package "ocular" "ocular"
+    install_package "okular" "okular"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    install_package "openjdk7" "openjdk-7-jdk"
+    install_package "openjdk-8-jdk" "openjdk-8-jdk"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -245,7 +244,11 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    install_package "sublime-text" "sublime-text"
+    if ! package_is_installed "sublime-text"; then
+        add_ppa "ppa:webupd8team/sublime-text-3"
+        update
+    fi
+    install_package "sublime-text-installer" "sublime-text-installer"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

@@ -132,7 +132,9 @@ install_photo() {
     update
     execute "sudo apt-get install --allow-unauthenticated -qqy rawtherapee" "rawtherapee" 
     execute "sudo apt-get install --allow-unauthenticated -qqy hdrmerge" "hdrmerge"  
-    execute "sudo apt-get install --allow-unauthenticated -qqy luminance-hdr" "luminance-hdr" 
+    if ! package_is_installed "luminance-hdr"; then
+    	execute "sudo apt-get install --allow-unauthenticated -qqy luminance-hdr" "luminance-hdr" 
+    fi
     execute "sudo add-apt-repository -y ppa:hugin/hugin-builds"
     update
     execute "sudo apt-get install --allow-unauthenticated -qqy hugin enblend" "hugin" 

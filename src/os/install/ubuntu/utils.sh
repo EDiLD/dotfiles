@@ -142,6 +142,13 @@ install_z() {
     execute "wget https://raw.githubusercontent.com/rupa/z/master/z.sh -O ~/z.sh" "Download z"
 }
 
+# install_arc() {
+#     install_package "gtk2-engines-murrine" "gtk2-engines-murrine"
+#     install_package "libgtk-3-dev" "libgtk-3-dev"
+#     execute "cd Downloads && git clone https://github.com/horst3180/arc-theme --depth 1 && cd arc-theme" " Clone arc repository"
+#     execture "./autogen.sh --prefix=/usr --disable-light --disable-darker --disable-cinnamon -disable-unity"
+# }
+
 package_is_installed() {
     dpkg -s "$1" &> /dev/null
 }

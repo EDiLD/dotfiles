@@ -97,6 +97,10 @@ main() {
     install_package "Git" "git"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    # arc theme: https://github.com/horst3180/arc-theme
+    # install_arc
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "indicator-multiload" "indicator-multiload"
 

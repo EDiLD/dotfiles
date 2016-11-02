@@ -9,15 +9,18 @@ files described in the [`Local Settings`](#local-settings) section.
 
 ## Setup
 
-To set up the `dotfiles` just run the appropriate snippet in the
-terminal:
+To set up the `dotfiles` clone this repository and run setup.sh:
 
-(:warning: **DO NOT** run the `setup` snippet if you don't fully
+```bash
+git clone git@github.com:EDiLD/dotfiles.git
+./dotfiles/src/os/setup.sh
+
+```
+
+
+
+(:warning: **DO NOT** run the `setup.sh` snippet if you don't fully
 understand [what it does](src/os/setup.sh). Seriously, **DON'T**!)
-
-| OS | Snippet |
-|:---:|:---|
-| `Ubuntu` | `bash -c "$(wget -qO - https://raw.github.com/EDiLD/dotfiles/master/src/os/setup.sh)"` |
 
 That's it! :sparkles:
 
@@ -28,7 +31,11 @@ The setup process will:
 * Create some additional [directories](src/os/create_directories.sh)
 * [Symlink](src/os/create_symbolic_links.sh) the
   [`git`](src/git),
-  [`shell`](src/shell), and
+  [`shell`](src/shell), 
+  [`sublime-text`](src/sublime-text),
+  [`xfce`](src/xfce4),
+  [`zsh`](src/zsh)
+  [`.Rprofile`](src/R)and
   [`conky`](src/conky) files
 * Install applications / command-line tools for
   [`Ubuntu`](src/os/install/ubuntu)
@@ -114,11 +121,13 @@ part, run the appropriate [`os` script](src/os).
 
 
 ## Acknowledgements
+Initial clone from [Cătălin Mariș'](https://github.com/alrra/dotfiles) dotfiles.
 
 Inspiration and code was taken from many sources, including:
 
 * [Mathias Bynens'](https://github.com/mathiasbynens)
   [dotfiles](https://github.com/mathiasbynens/dotfiles)
+
 
 
 ## License

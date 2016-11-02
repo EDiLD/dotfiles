@@ -126,27 +126,6 @@ main() {
 
     install_package "leafpad" "leafpad"
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    install_package "libssl" "libssl-dev"
-    install_package "libcurl" "libcurl4-openssl-dev"
-    install_package "libcairo" "libcairo2"
-    install_package "libcairo2" "libcairo2-dev"
-    install_package "libgeos" "libgeos-dev"
-    install_package "libgdal1h" "libgdal1h"
-    install_package "libgdal1-dev" "libgdal1-dev"
-    install_package "libproj-dev" "libproj-dev"
-    install_package "libgsl0-dev" "libgsl0-dev"
-    install_package "libpq" "libpq-dev"
-    install_package "libxml2" "libxml2-dev"
-    install_package "mesa-common-dev" "mesa-common-dev"
-    install_package "libglu1-mesa-dev" "libglu1-mesa-dev"
-    install_package "freeglut3-dev" "freeglut3-dev"
-    install_package "libgsl0ldbl" "libgsl0ldbl"
-    install_package "libgtk2.0-dev" "libgtk2.0-dev"
-
-    
-
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -161,12 +140,6 @@ main() {
 
     install_package "nano" "nano"
 
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    install_package "npm" "npm"
-    execute "sudo npm install -g duereg/write-gooder"
-    execute "sudo ln -s /usr/bin/nodejs /usr/bin/node"
     
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -276,7 +249,10 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    install_package "apt-xapian-index" "apt-xapian-index for synaptic"
+    execute "sudo update-apt-xapian-index -vf"
     install_package "synaptic" "synaptic"   
+    
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     # Teamviewer
@@ -335,6 +311,8 @@ main() {
     install_package "zsh" "zsh"
     execute 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"' "oh-my-zsh"
     execute 'git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting' 'zsh-syntax-highlighting'
+    execute "sudo chsh --shell /usr/bin/zsh" "set zsh as default shell"
+
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_dropbox
@@ -342,6 +320,22 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_gis
+    install_package "libssl" "libssl-dev"
+    install_package "libcurl" "libcurl4-openssl-dev"
+    install_package "libcairo" "libcairo2"
+    install_package "libcairo2" "libcairo2-dev"
+    install_package "libgeos" "libgeos-dev"
+    install_package "libgdal1h" "libgdal1h"
+    install_package "libgdal1-dev" "libgdal1-dev"
+    install_package "libproj-dev" "libproj-dev"
+    install_package "libgsl0-dev" "libgsl0-dev"
+    install_package "libpq" "libpq-dev"
+    install_package "libxml2" "libxml2-dev"
+    install_package "mesa-common-dev" "mesa-common-dev"
+    install_package "libglu1-mesa-dev" "libglu1-mesa-dev"
+    install_package "freeglut3-dev" "freeglut3-dev"
+    install_package "libgsl0ldbl" "libgsl0ldbl"
+    install_package "libgtk2.0-dev" "libgtk2.0-dev"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

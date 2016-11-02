@@ -275,9 +275,14 @@ main() {
     install_package "sublime-text" "sublime-text"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    install_package "synaptic" "synaptic"   
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     # Teamviewer
 
     install_url "Teamviewer" "teamviewer" "https://download.teamviewer.com/download/teamviewer_i386.deb"
+    execute "sudo apt-get -f install" "fix deps"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

@@ -226,18 +226,14 @@ main() {
     install_package "rhythmbox" "rhythmbox"    
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    if [ ! -d "/usr/share/fonts/opentype" ]; then
-        execute \
+    ## Source code pro
+    execute \
             "[ -d /usr/share/fonts/opentype ] || sudo mkdir -p /usr/share/fonts/opentype" \
             "Source Code Pro"
-        execute \
+    execute \
             "sudo git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git /usr/share/fonts/opentype/scp" \
              "clone repo"
-        execute "sudo fc-cache -f -v" "update cache"
-    else
-        print_success "Source Code Pro"
-    fi
+    execute "sudo fc-cache -f -v" "update cache"
 
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -338,7 +334,6 @@ main() {
     install_package "mesa-common-dev" "mesa-common-dev"
     install_package "libglu1-mesa-dev" "libglu1-mesa-dev"
     install_package "freeglut3-dev" "freeglut3-dev"
-    install_package "libgsl0ldbl" "libgsl0ldbl"
     install_package "libgtk2.0-dev" "libgtk2.0-dev"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

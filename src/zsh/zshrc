@@ -2,7 +2,7 @@
 export ZSH=/home/user/.oh-my-zsh
 
 # path to z
-. /home/user/z.sh
+. /home/edisz/z.sh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.

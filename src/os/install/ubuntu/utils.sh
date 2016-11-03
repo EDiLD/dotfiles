@@ -151,10 +151,9 @@ install_z() {
 }
 
 # install_arc() {
-#     install_package "gtk2-engines-murrine" "gtk2-engines-murrine"
-#     install_package "libgtk-3-dev" "libgtk-3-dev"
-#     execute "cd Downloads && git clone https://github.com/horst3180/arc-theme --depth 1 && cd arc-theme" " Clone arc repository"
-#     execture "./autogen.sh --prefix=/usr --disable-light --disable-darker --disable-cinnamon -disable-unity"
+# sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_16.04/ /' > /etc/apt/sources.list.d/arc-theme.list"
+# sudo apt-get update
+# sudo apt-get install arc-theme
 # }
 
 package_is_installed() {

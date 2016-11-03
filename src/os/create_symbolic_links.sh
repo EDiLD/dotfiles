@@ -93,8 +93,6 @@ create_symlinks() {
 
         "R/Rprofile"
 
-        "pgadmin/pgadmin3"
-
         "zsh/zshrc"
 
     )

@@ -249,7 +249,7 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    add_ppa "ppa:webupd8team/sublime-text-3"
+    add_ppa "webupd8team/sublime-text-3"
     update
     install_package "sublime-text-installer" "sublime-text-installer"
 
@@ -316,8 +316,8 @@ main() {
 
     install_package "zsh" "zsh"
     execute 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"' "oh-my-zsh"
-    execute 'git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting' 'zsh-syntax-highlighting'
-    execute "chsh -s $(which zsh)" "set zsh as default shell"
+    install_package "zsh-syntax-highlighting" "zsh-syntax-highlighting"
+    execute "sudo chsh -s $(which zsh) edisz" "set zsh as default shell"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -331,10 +331,8 @@ main() {
     install_package "libcairo" "libcairo2"
     install_package "libcairo2" "libcairo2-dev"
     install_package "libgeos" "libgeos-dev"
-    install_package "libgdal1h" "libgdal1h"
     install_package "libgdal1-dev" "libgdal1-dev"
     install_package "libproj-dev" "libproj-dev"
-    install_package "libgsl0-dev" "libgsl0-dev"
     install_package "libpq" "libpq-dev"
     install_package "libxml2" "libxml2-dev"
     install_package "mesa-common-dev" "mesa-common-dev"
@@ -354,6 +352,10 @@ main() {
     ask_for_confirmation
 
     print_in_yellow "Copy Firefox settings (addons, blog/feeds, bookmarks).
+    Done?"
+    ask_for_confirmation
+
+    print_in_yellow "Copy .pgadmin.
     Done?"
     ask_for_confirmation
 

@@ -150,8 +150,12 @@ main() {
 
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    #ocrmypdf
 
-    install_package "ocrmypdf" "ocrmypdf"
+    install_package "python3-pip" "python3-pip"
+    execute "sudo pip3 install --upgrade pip" "supgrade pip"
+    install_package "libffi-dev" "libffi-dev"
+    execute "sudo pip3 install ocrmypdf" "ocrmypdf"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

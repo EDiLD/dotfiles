@@ -242,21 +242,19 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    install_package "ruby2.0" "ruby2.0"
-    execute "sudo gem2.0 install jekyll" "Installing Jekyll"
-    execute "sudo gem2.0 install github-pages" "Install github-pages gem"
+    install_package "ruby2.3" "ruby2.3"
+    execute "sudo gem2.3 install jekyll" "Installing Jekyll"
+    execute "sudo gem2.3 install github-pages" "Install github-pages gem"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    if ! package_is_installed "sublime-text"; then
-        add_ppa "ppa:webupd8team/sublime-text-3"
-        update
-    fi
+    add_ppa "ppa:webupd8team/sublime-text-3"
+    update
     install_package "sublime-text-installer" "sublime-text-installer"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    install_package "apt-xapian-index" "apt-xapian-index for synaptic"
+    install_package "apt-xapian-index" "apt-xapian-index"
     execute "sudo update-apt-xapian-index -vf"
     install_package "synaptic" "synaptic"   
     

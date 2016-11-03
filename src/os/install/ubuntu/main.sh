@@ -243,6 +243,7 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "ruby2.3" "ruby2.3"
+    install_package "ruby2.3-dev" "ruby2.3-dev"
     execute "sudo gem2.3 install jekyll" "Installing Jekyll"
     execute "sudo gem2.3 install github-pages" "Install github-pages gem"
 
@@ -316,7 +317,7 @@ main() {
     install_package "zsh" "zsh"
     execute 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"' "oh-my-zsh"
     execute 'git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting' 'zsh-syntax-highlighting'
-    execute "sudo chsh --shell /usr/bin/zsh" "set zsh as default shell"
+    execute "chsh -s $(which zsh)" "set zsh as default shell"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

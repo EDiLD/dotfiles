@@ -150,6 +150,15 @@ install_z() {
     execute "wget https://raw.githubusercontent.com/rupa/z/master/z.sh -O ~/z.sh" "Download z"
 }
 
+install_scp() {
+	wget https://github.com/adobe-fonts/source-code-pro/archive/2.030R-ro/1.050R-it.zip
+	unzip 1.050R-it.zip
+	mkdir -p ~/.fonts
+	mv source-code-pro-2.030R-ro-1.050R-it/OTF/*.otf ~/.fonts
+	rm -r 1.050R-it.zip source-code-pro-2.030R-ro-1.050R-it
+	fc-cache -f -v
+}
+
 # install_arc() {
 # sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_16.04/ /' > /etc/apt/sources.list.d/arc-theme.list"
 # sudo apt-get update

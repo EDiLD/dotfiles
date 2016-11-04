@@ -227,13 +227,7 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     ## Source code pro
-    execute \
-            "[ -d /usr/share/fonts/opentype ] || sudo mkdir -p /usr/share/fonts/opentype" \
-            "Source Code Pro"
-    execute \
-            "sudo git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git /usr/share/fonts/opentype/scp" \
-             "clone repo"
-    execute "sudo fc-cache -f -v" "update cache"
+    install_scp
 
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -251,8 +245,7 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    install_package "apt-xapian-index" "apt-xapian-index"
-    execute "sudo update-apt-xapian-index -vf"
+    install_package "apt-xapian-index" "apt-xapian-index"s
     install_package "synaptic" "synaptic"   
     
 

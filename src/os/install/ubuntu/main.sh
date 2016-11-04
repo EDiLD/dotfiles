@@ -49,6 +49,7 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    install_package "libqt5libqgtk2" "libqt5libqgtk2"
     install_package "Dolphin" "dolphin"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

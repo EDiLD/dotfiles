@@ -153,7 +153,7 @@ main() {
     #ocrmypdf
 
     install_package "python3-pip" "python3-pip"
-    execute "sudo pip3 install --upgrade pip" "supgrade pip"
+    execute "sudo pip3 install --upgrade pip" "upgrade pip"
     install_package "libffi-dev" "libffi-dev"
     execute "sudo pip3 install ocrmypdf" "ocrmypdf"
 
@@ -245,7 +245,7 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    install_package "apt-xapian-index" "apt-xapian-index"s
+    install_package "apt-xapian-index" "apt-xapian-index"
     install_package "synaptic" "synaptic"   
     
 

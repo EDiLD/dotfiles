@@ -122,6 +122,7 @@ main() {
     install_package "Beamer" "latex-beamer"
     install_package "latexdiff" "latexdiff"
     install_package "latexmk" "latexmk"
+    install_package "texlive-fonts-extra" "texlive-fonts-extra"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

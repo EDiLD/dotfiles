@@ -123,6 +123,7 @@ main() {
     install_package "latexdiff" "latexdiff"
     install_package "latexmk" "latexmk"
     install_package "texlive-fonts-extra" "texlive-fonts-extra"
+    install_package "texlive-publishers" "texlive-publishers"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

@@ -124,6 +124,7 @@ main() {
     install_package "latexmk" "latexmk"
     install_package "texlive-fonts-extra" "texlive-fonts-extra"
     install_package "texlive-publishers" "texlive-publishers"
+    install_package "biber" "biber"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

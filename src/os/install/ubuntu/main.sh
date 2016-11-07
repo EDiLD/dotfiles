@@ -50,6 +50,7 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "libqt5libqgtk2" "libqt5libqgtk2"
+    install_package "plasma-desktop" "plasma-desktop"
     install_package "Dolphin" "dolphin"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

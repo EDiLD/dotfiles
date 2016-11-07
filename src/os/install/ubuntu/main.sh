@@ -266,6 +266,10 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    install_package "tlp" "tlp"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
     install_package "texi2html" "texi2html"
     install_package "texlive" "texlive"
     install_package "texlive-base" "texlive-base"
@@ -333,6 +337,12 @@ main() {
     install_package "libglu1-mesa-dev" "libglu1-mesa-dev"
     install_package "freeglut3-dev" "freeglut3-dev"
     install_package "libgtk2.0-dev" "libgtk2.0-dev"
+
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    # multimedia stuff
+    install_package "ubuntu-restricted-extras" "ubuntu-restricted-extras"
+
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

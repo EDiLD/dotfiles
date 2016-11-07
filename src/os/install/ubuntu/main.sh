@@ -245,6 +245,8 @@ main() {
     add_ppa "webupd8team/sublime-text-3"
     update
     install_package "sublime-text-installer" "sublime-text-installer"
+# install package control (this will also install missing packages after 1st start
+    install_sublime_pc
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

@@ -99,7 +99,7 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     # arc theme: https://github.com/horst3180/arc-theme
-    # install_arc
+    install_arc
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

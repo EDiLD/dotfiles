@@ -159,11 +159,21 @@ install_scp() {
 	fc-cache -f -v
 }
 
-# install_arc() {
-# sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_16.04/ /' > /etc/apt/sources.list.d/arc-theme.list"
-# sudo apt-get update
-# sudo apt-get install arc-theme
-# }
+install_arc() {
+# add key
+	wget http://download.opensuse.org/repositories/home:Horst3180/xUbuntu_16.04/Release.key
+	sudo apt-key add - < Release.key
+	sudo apt-get update
+	rm Release.key
+# install theme
+	sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_16.04/ /' > /etc/apt/sources.list.d/arc-theme.list"
+	sudo apt-get update
+	sudo apt-get install arc-theme
+# aks for change
+	print_in_yellow "Changed theme to arc-dark? >Appearance>style and > Window manager>style.
+	Done?"
+	ask_for_confirmation
+}
 
 package_is_installed() {
     dpkg -s "$1" &> /dev/null

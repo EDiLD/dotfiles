@@ -217,6 +217,8 @@ main() {
     install_package "R-base-core" "r-base-core"
     install_package "R-base-dev" "r-base-dev"
     install_package "r-recommendedcd source" "r-recommended"
+    install_package "libopenblas-dev" "libopenblas-dev"
+    install_package "libatlas-base-dev" "libatlas-base-dev"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

@@ -184,6 +184,9 @@ install_arc() {
 install_sublime_pc() {
 	execute "wget -P '/home/edisz/.config/sublime-text-3/Installed Packages/' https://packagecontrol.io/Package%20Control.sublime-package" "Download package control"
         # install word count https://github.com/titoBouzout/WordCount
+ 	if [ -d '/home/edisz/.config/sublime-text-3/Packages/WordCount' ]; then
+		rm /home/edisz/.config/sublime-text-3/Packages/WordCount
+	fi
 	execute "git clone https://github.com/titoBouzout/WordCount.git /home/edisz/.config/sublime-text-3/Packages/WordCount" "Install word count"
 }
 

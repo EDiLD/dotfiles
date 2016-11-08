@@ -151,28 +151,34 @@ install_z() {
 }
 
 install_scp() {
-	wget https://github.com/adobe-fonts/source-code-pro/archive/2.030R-ro/1.050R-it.zip
-	unzip 1.050R-it.zip
-	mkdir -p ~/.fonts
-	mv source-code-pro-2.030R-ro-1.050R-it/OTF/*.otf ~/.fonts
-	rm -r 1.050R-it.zip source-code-pro-2.030R-ro-1.050R-it
-	fc-cache -f -v
+    	if [ -f /home/edisz/.fonts/SourceCodePro-Regular.otf ]; then
+        	print_success "Source Code Pro"
+	else
+		wget https://github.com/adobe-fonts/source-code-pro/archive/2.030R-ro/1.050R-it.zip
+		unzip 1.050R-it.zip
+		mkdir -p ~/.fonts
+		mv source-code-pro-2.030R-ro-1.050R-it/OTF/*.otf ~/.fonts
+		rm -r 1.050R-it.zip source-code-pro-2.030R-ro-1.050R-it
+		fc-cache -f -v
+	fi
 }
 
 install_arc() {
-# add key
-	wget http://download.opensuse.org/repositories/home:Horst3180/xUbuntu_16.04/Release.key
-	sudo apt-key add - < Release.key
-	sudo apt-get update
-	rm Release.key
-# install theme
-	sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_16.04/ /' > /etc/apt/sources.list.d/arc-theme.list"
-	sudo apt-get update
-	sudo apt-get install arc-theme
-# aks for change
-	print_in_yellow "Changed theme to arc-dark? >Appearance>style and > Window manager>style.
-	Done?"
-	ask_for_confirmation
+	if ! package_is_installed "arc-theme"; then
+	# add key
+		wget http://download.opensuse.org/repositories/home:Horst3180/xUbuntu_16.04/Release.key
+		sudo apt-key add - < Release.key
+		sudo apt-get update
+		rm Release.key
+	# install theme
+		sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_16.04/ /' > /etc/apt/sources.list.d/arc-theme.list"
+		sudo apt-get update
+		sudo apt-get install arc-theme
+	# aks for change
+		print_in_yellow "Changed theme to arc-dark? >Appearance>style and > Window manager>style.
+		Done?"
+		ask_for_confirmation
+	fi
 }
 
 install_sublime_pc() {

@@ -260,7 +260,7 @@ main() {
     # Teamviewer
 
     install_url "Teamviewer" "teamviewer" "https://download.teamviewer.com/download/teamviewer_i386.deb"
-    execute "sudo apt-get -f install" "fix deps"
+    execute "sudo apt-get -f install" "sudo apt-get -f install"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -317,7 +317,9 @@ main() {
     install_package "zsh" "zsh"
     execute 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"' "oh-my-zsh"
     install_package "zsh-syntax-highlighting" "zsh-syntax-highlighting"
-    execute "sudo chsh -s $(which zsh) edisz" "set zsh as default shell"
+    print_in_yellow "Run $sudo chsh -s $(which zsh) edisz to set default shell
+    Done?"
+    ask_for_confirmation
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

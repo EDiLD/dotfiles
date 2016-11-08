@@ -317,8 +317,8 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "zsh" "zsh"
-    execute "rm -rf /home/edisz/.oh-my-zsh" "rm old oh-my-zsh"
-    execute "rm /home/edisz/.zshrc" "rm old zshrc"
+    execute "rm -rf /home/edisz/.oh-my-zsh" "rm -rf /home/edisz/.oh-my-zsh"
+    execute "rm /home/edisz/.zshrc" "rm /home/edisz/.zshrc"
     execute 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"' "oh-my-zsh"
     
     print_in_yellow "Run >sudo chsh -s $(grep /zsh$ /etc/shells | tail -1) to set default shell

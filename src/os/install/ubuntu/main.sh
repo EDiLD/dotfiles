@@ -245,6 +245,10 @@ main() {
     execute "sudo gem2.3 install github-pages" "Install github-pages gem"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    install_package "samba" "samba"
+    install_package "smbclient" "smbclient"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     add_ppa "webupd8team/sublime-text-3"
     update

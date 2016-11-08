@@ -22,6 +22,7 @@ create_directories() {
 	"$HOME/Documents/private/taxes"
 	"$HOME/Documents/private/business_card"
 	"$HOME/Documents/private/car"
+	"$HOME/Documents/private/other"
 
 	"$HOME/Documents/other"
 	"$HOME/Documents/other/backup_scripts"

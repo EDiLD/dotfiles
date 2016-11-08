@@ -319,7 +319,7 @@ main() {
     install_package "zsh" "zsh"
     execute "rm -rf /home/edisz/.oh-my-zsh" "rm -rf /home/edisz/.oh-my-zsh"
     execute "rm /home/edisz/.zshrc" "rm /home/edisz/.zshrc"
-    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    execute 'sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"'
     
     print_in_yellow "Run >sudo chsh -s $(grep /zsh$ /etc/shells | tail -1) to set default shell
     Done?"

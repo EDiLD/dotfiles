@@ -324,11 +324,16 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "xfce4-sensors-plugin" "xfce4-sensors-plugin"
+    install_package "xfce4-mount-plugin" "xfce4-mount-plugin"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     # zotero
 
-    execute 'install_zotero' 'Zotero'
+    # execute 'install_zotero' 'Zotero' # script from sources
+    # from ppa
+    add_ppa "smathot/cogscinl "
+    update
+    install_package "zotero-standalone" "zotero-standalone"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

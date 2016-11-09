@@ -63,6 +63,10 @@ install_package() {
 
 }
 
+remove_package(){
+    apt-get purge "$1"
+}
+
 install_zotero() {
     VERSION="4.0.29.10"
     if [ `uname -m` == "x86_64" ]; then

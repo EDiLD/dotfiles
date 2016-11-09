@@ -99,6 +99,10 @@ main() {
     install_package "Git" "git"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    install_package "gparted" "gparted"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     # arc theme: https://github.com/horst3180/arc-theme
     install_arc
 
@@ -197,6 +201,10 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "pgadmin" "pgadmin3"    
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    install_package "preload" "preload"   
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -314,6 +322,10 @@ main() {
     install_package "VLC" "vlc"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    install_package "xfce4-sensors-plugin" "xfce4-sensors-plugin"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     # zotero
 
     execute 'install_zotero' 'Zotero'
@@ -358,6 +370,10 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_z
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    remove_package "brltty"
+    remove_package "brltty-x11"
 
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

@@ -255,6 +255,7 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     install_package "samba" "samba"
     install_package "smbclient" "smbclient"
+    install_package "cifs-utils" "cifs-utils"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

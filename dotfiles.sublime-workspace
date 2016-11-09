@@ -15,8 +15,16 @@
 			"file": "src/os/install/ubuntu/main.sh",
 			"settings":
 			{
-				"buffer_size": 13331,
+				"buffer_size": 13572,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/usr/share/applications/winetricks.desktop",
+			"settings":
+			{
+				"buffer_size": 150,
 				"line_ending": "Unix"
 			}
 		},
@@ -70,6 +78,9 @@
 	],
 	"file_history":
 	[
+		"/home/edisz/Desktop/PDFXEdit.desktop",
+		"/usr/share/applications/winetricks.desktop",
+		"/usr/share/applications/wine.desktop",
 		"/media/edisz/backup_hdd/etc/fstab",
 		"/home/edisz/Documents/other/backup_scripts/used_sync_intranet.sh",
 		"/media/edisz/backup_hdd/home/edisz/backup_scripts/used_backup.sh",
@@ -124,23 +135,23 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13331,
+						"buffer_size": 13572,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8305,
-								8305
+								8546,
+								8546
 							]
 						],
 						"settings":
 						{
 							"WordCount":
 							{
-								"changes": 0,
-								"count": 739,
+								"changes": 28,
+								"count": 752,
 								"modified": false,
 								"selection": false,
 								"status": -1,
@@ -151,7 +162,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 4216.0,
+						"translation.y": 4502.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -159,6 +170,43 @@
 				},
 				{
 					"buffer": 1,
+					"file": "/usr/share/applications/winetricks.desktop",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 150,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								15,
+								15
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 0,
+								"count": 5,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "src/os/install/ubuntu/utils.sh",
 					"semi_transient": false,
 					"settings":
@@ -184,7 +232,7 @@
 						"translation.y": 1162.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -270,7 +318,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 150.0,
 	"status_bar_visible": true,
 	"template_settings":

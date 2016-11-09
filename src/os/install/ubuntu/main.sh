@@ -227,6 +227,7 @@ main() {
     install_package "r-recommendedcd source" "r-recommended"
     install_package "libopenblas-dev" "libopenblas-dev"
     install_package "libatlas-base-dev" "libatlas-base-dev"
+    install_package "libgsl-dev" "libgsl-dev"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -258,6 +259,9 @@ main() {
     install_package "cifs-utils" "cifs-utils"
     install_package "openconnect" "openconnect"
     install_package "network-manager-openconnect" "network-manager-openconnect"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    install_package "shutter" "shutter"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

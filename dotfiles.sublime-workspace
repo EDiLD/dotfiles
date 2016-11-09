@@ -11,6 +11,24 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "src/os/install/ubuntu/main.sh",
+			"settings":
+			{
+				"buffer_size": 13331,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/os/install/ubuntu/utils.sh",
+			"settings":
+			{
+				"buffer_size": 6120,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -44,10 +62,21 @@
 	},
 	"expanded_folders":
 	[
-		"/home/edisz/Documents/other/dotfiles_git"
+		"/home/edisz/Documents/other/dotfiles_git",
+		"/home/edisz/Documents/other/dotfiles_git/src",
+		"/home/edisz/Documents/other/dotfiles_git/src/os",
+		"/home/edisz/Documents/other/dotfiles_git/src/os/install",
+		"/home/edisz/Documents/other/dotfiles_git/src/os/install/ubuntu"
 	],
 	"file_history":
 	[
+		"/media/edisz/backup_hdd/etc/fstab",
+		"/home/edisz/Documents/other/backup_scripts/used_sync_intranet.sh",
+		"/media/edisz/backup_hdd/home/edisz/backup_scripts/used_backup.sh",
+		"/media/edisz/backup_hdd/home/edisz/backup_scripts/used_sync_intranet.sh",
+		"/home/edisz/Documents/work/software/shiny_apps/.git/description",
+		"/home/edisz/Documents/work/software/shiny_apps/mesocosm/prc/.git/description",
+		"/media/edisz/backup_hdd/home/edisz/Documents/Uni/Projects/PHD/8NUTRIENTTRENDS/src/1-NO3.R",
 		"/home/edisz/Documents/other/dotfiles_git/.gitignore",
 		"/home/edisz/Documents/other/dotfiles_git/src/os/install/ubuntu/utils.sh",
 		"/home/edisz/Documents/other/dotfiles_git/src/os/install/ubuntu/main.sh",
@@ -55,7 +84,7 @@
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -86,14 +115,84 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "src/os/install/ubuntu/main.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13331,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8305,
+								8305
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 0,
+								"count": 739,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4216.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/os/install/ubuntu/utils.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6120,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1405,
+								1405
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1162.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -126,11 +225,15 @@
 	{
 		"height": 0.0
 	},
+	"output.languagetool":
+	{
+		"height": 118.0
+	},
 	"pinned_build_system": "",
 	"project": "dotfiles.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":

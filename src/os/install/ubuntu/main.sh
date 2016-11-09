@@ -256,6 +256,8 @@ main() {
     install_package "samba" "samba"
     install_package "smbclient" "smbclient"
     install_package "cifs-utils" "cifs-utils"
+    install_package "openconnect" "openconnect"
+    install_package "network-manager-openconnect" "network-manager-openconnect"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

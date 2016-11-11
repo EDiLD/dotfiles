@@ -393,6 +393,10 @@ main() {
     Done?"
     ask_for_confirmation
 
+    print_in_yellow "Export and Import Enigmail/pgp settings?
+    Done?"
+    ask_for_confirmation
+
     print_in_yellow "Copy Firefox settings (addons, blog/feeds, bookmarks).
     Done?"
     ask_for_confirmation

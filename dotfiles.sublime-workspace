@@ -15,7 +15,7 @@
 			"file": "src/os/install/ubuntu/main.sh",
 			"settings":
 			{
-				"buffer_size": 13618,
+				"buffer_size": 13620,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -135,22 +135,22 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13618,
+						"buffer_size": 13620,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7415,
-								7415
+								1532,
+								1478
 							]
 						],
 						"settings":
 						{
 							"WordCount":
 							{
-								"changes": 15,
+								"changes": 0,
 								"count": 757,
 								"modified": false,
 								"selection": false,
@@ -162,7 +162,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3913.0,
+						"translation.y": 645.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

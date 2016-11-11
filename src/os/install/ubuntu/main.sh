@@ -303,6 +303,7 @@ main() {
     install_package "texlive-latex-recommended" "texlive-latex-recommended"
     install_package "texlive-math-extra" "texlive-math-extra"
     install_package "texlive-science" "texlive-science"
+    install_package "qtikz" "qtikz"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -402,6 +403,10 @@ main() {
     ask_for_confirmation
 
     print_in_yellow "Copy .pgadmin.
+    Done?"
+    ask_for_confirmation
+
+    print_in_yellow "Copy .ssh/.
     Done?"
     ask_for_confirmation
 

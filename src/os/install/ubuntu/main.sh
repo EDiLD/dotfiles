@@ -303,6 +303,7 @@ main() {
     install_package "texlive-latex-recommended" "texlive-latex-recommended"
     install_package "texlive-math-extra" "texlive-math-extra"
     install_package "texlive-science" "texlive-science"
+    install_package "texlive-xetex" "texlive-xetex"
     install_package "qtikz" "qtikz"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

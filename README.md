@@ -43,6 +43,7 @@ The setup process will:
   [`Ubuntu`](src/os/preferences/ubuntu) preferences
 * Install R 
   [`R`](src/R) packages
+* Misc stuff
 
 
 
@@ -94,16 +95,10 @@ as the `git` user credentials, e.g.:
 
 ```bash
 [user]
-    name = Cătălin Mariș
+    name = Eduard Szöcs
     email = EDiLD@example.com
     signingkey = XXXXXXXX
 ```
-
-#### `~/.vimrc.local`
-
-If the `~/.vimrc.local` file exists, it will be automatically sourced
-after `~/.vimrc`, thus, allowing its content to add or overwrite the
-settings from `~/.vimrc`.
 
 
 ### Forks

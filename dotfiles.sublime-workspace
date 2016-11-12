@@ -15,20 +15,9 @@
 			"file": "src/os/install/ubuntu/main.sh",
 			"settings":
 			{
-				"buffer_size": 13825,
+				"buffer_size": 13877,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "Remote:   origin @ git@github.com:EDiLD/dotfiles.git\nLocal:    master ~/Documents/other/dotfiles_git\nHead:     61a1150 added qtikz\n\n\nNothing to commit (working directory clean)\n\n# Movement:\n#    r = refresh status\n#    1-5 = jump to section\n#    n = next item, N = next section\n#    p = previous item, P = previous section\n#\n# Staging:\n#    s = stage file/section, S = stage all unstaged files\n#    ctrl+shift+s = stage all unstaged and untracked files\n#    u = unstage file/section, U = unstage all files\n#    backspace = discard file/section, shift+backspace = discard everything\n#\n# Commit:\n#    c = commit, C = commit -a (add unstaged)\n#    ctrl+shift+c = commit --amend (amend previous commit)\n#\n# Other:\n#    i = ignore file, I = ignore pattern\n#    enter = open file\n#    d = view diff\n#\n# Stashes:\n#    a = apply stash, A = pop stash\n#    z = create stash, Z = create stash including untracked files\n#    backspace = discard stash",
-			"settings":
-			{
-				"buffer_size": 938,
-				"line_ending": "Unix",
-				"name": "*git-status*: dotfiles_git",
-				"read_only": true,
-				"scratch": true
 			}
 		},
 		{
@@ -93,6 +82,7 @@
 	],
 	"file_history":
 	[
+		"/home/edisz/Documents/work/research/presentations_conferences/internal/three/slides_shortintro.log",
 		"/usr/share/applications/winetricks.desktop",
 		"/home/edisz/Desktop/PDFXEdit.desktop",
 		"/usr/share/applications/wine.desktop",
@@ -124,6 +114,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"error"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -141,7 +132,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -150,23 +141,23 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13825,
+						"buffer_size": 13877,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9509,
-								9509
+								10276,
+								10276
 							]
 						],
 						"settings":
 						{
 							"WordCount":
 							{
-								"changes": 19,
-								"count": 772,
+								"changes": 27,
+								"count": 777,
 								"modified": false,
 								"selection": false,
 								"status": -1,
@@ -180,55 +171,11 @@
 						"translation.y": 5181.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 938,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								133,
-								133
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 8,
-								"count": 102,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"__vi_external_disable": true,
-							"default_dir": "/home/edisz/Documents/other/dotfiles_git",
-							"draw_white_space": "none",
-							"git_repo": "/home/edisz/Documents/other/dotfiles_git",
-							"git_status": true,
-							"git_view": "status",
-							"syntax": "Packages/SublimeGit/syntax/SublimeGit Status.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 1,
 					"file": "src/os/install/ubuntu/utils.sh",
 					"semi_transient": false,
 					"settings":
@@ -246,6 +193,15 @@
 						],
 						"settings":
 						{
+							"WordCount":
+							{
+								"changes": 0,
+								"count": 459,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
 							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
@@ -254,7 +210,7 @@
 						"translation.y": 1162.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]

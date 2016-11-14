@@ -54,7 +54,7 @@ ${color1}Core 3             ${alignr}${color}${cpu cpu3}%  ${cpubar cpu3}
 ${color1}Core 4             ${alignr}${color}${cpu cpu4}%  ${cpubar cpu4}
 
 ${font AvantGardeLTMedium:bold:size=10}${color Tan1}RAM ${color slate grey}${hr 2}${font}
-${color1}Free Memory             ${color}${alignr}${memeasyfree} / ${memmax}
+${color1}Free Memory             ${color}${alignr}${mem} / ${memmax}
 ${color1}Currently used         ${color}${alignr}${memperc}%   ${membar}
 
 ${font AvantGardeLTMedium:bold:size=10}${color Tan1}HDD ${color slate grey}${hr 2}${font}

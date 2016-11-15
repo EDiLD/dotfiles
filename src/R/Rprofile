@@ -9,6 +9,7 @@
 	    library("prompt")
 	    library("clisymbols")
 	    set_prompt(prompt_fancy)
+	    library("prettycode")
 	}
 }
 

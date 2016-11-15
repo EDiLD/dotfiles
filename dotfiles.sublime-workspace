@@ -15,7 +15,7 @@
 			"file": "src/os/install/ubuntu/main.sh",
 			"settings":
 			{
-				"buffer_size": 13973,
+				"buffer_size": 14057,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -170,23 +170,23 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13973,
+						"buffer_size": 14057,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4200,
-								4200
+								7541,
+								7541
 							]
 						],
 						"settings":
 						{
 							"WordCount":
 							{
-								"changes": 31,
-								"count": 786,
+								"changes": 0,
+								"count": 792,
 								"modified": false,
 								"selection": false,
 								"status": -1,
@@ -197,7 +197,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1984.0,
+						"translation.y": 3874.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -222,15 +222,6 @@
 						],
 						"settings":
 						{
-							"WordCount":
-							{
-								"changes": 37,
-								"count": 42,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
 							"syntax": "Packages/R/R.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
@@ -260,15 +251,6 @@
 						],
 						"settings":
 						{
-							"WordCount":
-							{
-								"changes": 6,
-								"count": 169,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
 							"syntax": "Packages/R-Box/syntax/R Extended.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
@@ -299,15 +281,6 @@
 						],
 						"settings":
 						{
-							"WordCount":
-							{
-								"changes": 31,
-								"count": 283,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
 							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
@@ -338,15 +311,6 @@
 						],
 						"settings":
 						{
-							"WordCount":
-							{
-								"changes": 0,
-								"count": 459,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
 							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true

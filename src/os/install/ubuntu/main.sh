@@ -130,6 +130,7 @@ main() {
     install_package "texlive-fonts-extra" "texlive-fonts-extra"
     install_package "texlive-publishers" "texlive-publishers"
     install_package "biber" "biber"
+    install_package "texinfo" "texinfo"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -228,6 +229,8 @@ main() {
     install_package "libopenblas-dev" "libopenblas-dev"
     install_package "libatlas-base-dev" "libatlas-base-dev"
     install_package "libgsl-dev" "libgsl-dev"
+    install_package "subversion" "subversion"
+    install_package "ccache" "ccache"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

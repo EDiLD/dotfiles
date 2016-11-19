@@ -15,7 +15,7 @@
 			"file": "src/os/install/ubuntu/main.sh",
 			"settings":
 			{
-				"buffer_size": 14059,
+				"buffer_size": 14192,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -51,7 +51,7 @@
 			"file": "src/os/install/ubuntu/utils.sh",
 			"settings":
 			{
-				"buffer_size": 6144,
+				"buffer_size": 5672,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -143,6 +143,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"pyt",
 			"\"",
 			"error"
 		],
@@ -163,7 +164,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -172,23 +173,23 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 14059,
+						"buffer_size": 14192,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12115,
-								12115
+								7542,
+								7542
 							]
 						],
 						"settings":
 						{
 							"WordCount":
 							{
-								"changes": 1,
-								"count": 792,
+								"changes": 87,
+								"count": 799,
 								"modified": false,
 								"selection": false,
 								"status": -1,
@@ -199,10 +200,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 6177.0,
+						"translation.y": 3951.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -224,15 +225,6 @@
 						],
 						"settings":
 						{
-							"WordCount":
-							{
-								"changes": 14,
-								"count": 43,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
 							"syntax": "Packages/R/R.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
@@ -262,15 +254,6 @@
 						],
 						"settings":
 						{
-							"WordCount":
-							{
-								"changes": 18,
-								"count": 169,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
 							"syntax": "Packages/R-Box/syntax/R Extended.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
@@ -318,28 +301,19 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6144,
+						"buffer_size": 5672,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2425,
-								2425
+								2477,
+								2477
 							]
 						],
 						"settings":
 						{
-							"WordCount":
-							{
-								"changes": 12,
-								"count": 459,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
 							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
@@ -348,7 +322,7 @@
 						"translation.y": 1648.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]

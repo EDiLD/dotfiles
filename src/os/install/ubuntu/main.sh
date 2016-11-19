@@ -326,6 +326,10 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    install_package "tree" "tree"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
     install_package "unison" "unison"
     install_package "unison-gtk" "unison-gtk"
 
@@ -356,10 +360,6 @@ main() {
     Done?'
     ask_for_confirmation
     install_package "zsh-syntax-highlighting" "zsh-syntax-highlighting"
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    # install_dropbox
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -395,6 +395,11 @@ main() {
 
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    print_in_yellow "Install AngrySearch. https://github.com/DoTheEvo/ANGRYsearch.
+    Done?"
+    ask_for_confirmation
+
     print_in_yellow "Copy Thunderbird Profiles.
     Done?"
     ask_for_confirmation

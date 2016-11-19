@@ -104,19 +104,6 @@ install_zotero() {
     fi
 }
 
-# install_dropbox() {
-#     if [ -d '$HOME/.dropbox-dist/dropboxd' ]; then
-#         print_success "Dropbox"
-#     else
-#         if [ `uname -m` == "x86_64" ]; then
-#             execute 'cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -' 'Dropbox'
-#         else
-#             execute 'cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86" | tar xzf -' 'Dropbox'
-#         fi
-#         ~/.dropbox-dist/dropboxd &
-#     fi
-# }
-
 install_gis() {
 
     if ! package_is_installed "qgis"; then

@@ -202,6 +202,7 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "pgadmin" "pgadmin3"    
+    install_package "postgis" "postgis"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

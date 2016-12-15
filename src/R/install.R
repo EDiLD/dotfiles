@@ -6,7 +6,7 @@ message('Installing CRAN packages...')
 cran_pkg <- c('ade4', 'devtools', 'bit64', 'boot', 'Cairo', 'cairoDevice', 
               'car',
               'caret','censReg', 'clisymbols', 'cowplot',
-              'cluster', 'crayon', 'coin', 'contrast', 'covr', 
+              'cluster', 'crayon', 'coin', 'contrast', 'covr', 'DHARMa',
               'DAAG', 'data.table', 'DEoptim', 'deSolve', 
               'drc', 'drm', 'extrafont', 'fitdistrplus', 'flexsurv', 
               'fortunes', 'gamlss', 'gamlss.add', 'gamlss.cens', 'gcbd',
@@ -78,7 +78,20 @@ if (length(bioc_pkg) > 0) {
 
 
 # Update existing ------------------------------------------------------------
+message('Updating packages...')
 update.packages(repos = 'https://cloud.r-project.org/',
   ask = FALSE,
   lib.loc =  '~/R/library'
   )
+
+
+# Install xkcd fonts ----------------------------------------------------------
+message('Installing XKCD fonts')
+
+library('extrafont')
+download.file("http://simonsoftware.se/other/xkcd.ttf",
+  dest = "xkcd.ttf", mode = "wb")
+system("mkdir -p ~/.fonts")
+system("cp xkcd.ttf ~/.fonts")
+font_import(pattern = "[X/x]kcd", prompt = FALSE)
+file.remove("xkcd.ttf")

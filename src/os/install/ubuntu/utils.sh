@@ -110,7 +110,7 @@ install_gis() {
         execute "sudo add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable"
         update
         execute "sudo apt-get install --allow-unauthenticated -qqy qgis" "qgis"
-        execute "sudo apt-get install --allow-unauthenticated -qqy grass" "grass"   
+        execute "sudo apt-get install --allow-unauthenticated -qqy grass grass-dev" "grass"   
         execute "sudo ldconfig -v"   "ldconfig"   
     else
         print_success "qgis"

@@ -4,7 +4,7 @@ inst_pkg <- installed.packages()[ , 'Package']
 # CRAN --------------------------------------------------------------------
 message('Installing CRAN packages...')
 cran_pkg <- c('ade4', 'devtools', 'bit64', 'boot', 'Cairo', 'cairoDevice', 
-              'car',
+              'car', 'coefplot', 
               'caret','censReg', 'clisymbols', 'cowplot',
               'cluster', 'crayon', 'coin', 'contrast', 'covr', 'DHARMa',
               'DAAG', 'data.table', 'DEoptim', 'deSolve', 

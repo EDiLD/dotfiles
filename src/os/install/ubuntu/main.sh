@@ -134,7 +134,7 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    install_package "leafpad" "leafpad"
+    # install_package "leafpad" "leafpad"
 
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -177,19 +177,19 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    if ! package_is_installed "owncloud-client"; then
+    # if ! package_is_installed "owncloud-client"; then
 
-        add_key "http://download.opensuse.org/repositories/isv:ownCloud:desktop/Ubuntu_14.04/Release.key"
+    #     add_key "http://download.opensuse.org/repositories/isv:ownCloud:desktop/Ubuntu_14.04/Release.key"
 
-        add_to_source_list "http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Ubuntu_14.10/ /" "owncloud-client.list" \
-            || print_error "Owncloud (add to package resource list)"
+    #     add_to_source_list "http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Ubuntu_14.10/ /" "owncloud-client.list" \
+    #         || print_error "Owncloud (add to package resource list)"
 
-        update &> /dev/null \
-            || print_error "Owncloud (resync package index files)"
+    #     update &> /dev/null \
+    #         || print_error "Owncloud (resync package index files)"
 
-    fi
+    # fi
 
-    install_package "Owncloud" "owncloud-client"
+    # install_package "Owncloud" "owncloud-client"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -258,11 +258,11 @@ main() {
     execute "sudo gem2.3 install github-pages" "Install github-pages gem"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    install_package "samba" "samba"
-    install_package "smbclient" "smbclient"
-    install_package "cifs-utils" "cifs-utils"
-    install_package "openconnect" "openconnect"
-    install_package "network-manager-openconnect" "network-manager-openconnect"
+    # install_package "samba" "samba"
+    # install_package "smbclient" "smbclient"
+    # install_package "cifs-utils" "cifs-utils"
+    # install_package "openconnect" "openconnect"
+    # install_package "network-manager-openconnect" "network-manager-openconnect"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     install_package "shutter" "shutter"
@@ -331,8 +331,8 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    install_package "unison" "unison"
-    install_package "unison-gtk" "unison-gtk"
+    # install_package "unison" "unison"
+    # install_package "unison-gtk" "unison-gtk"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

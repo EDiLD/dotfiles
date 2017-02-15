@@ -154,6 +154,26 @@ install_scp() {
 	fi
 }
 
+install_zsh() {
+    # install zsh
+    install_package "zsh" "zsh"
+
+    # ask to replace configs
+    if [ -f /home/edisz/.zshrc ]; then
+        ask_for_confirmation "Found /home/edisz/.zshrc. Repace?"
+        if answer_is_yes; then
+            execute "rm -rf /home/edisz/.oh-my-zsh" "rm -rf /home/edisz/.oh-my-zsh"
+            execute "rm /home/edisz/.zshrc" "rm /home/edisz/.zshrc"
+        fi
+    fi
+
+    # install oh-my-zsh
+    print_in_yellow 'run sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    Done?'
+    ask_for_confirmation
+    install_package "zsh-syntax-highlighting" "zsh-syntax-highlighting"
+}
+
 install_arc() {
 	if ! package_is_installed "arc-theme"; then
 	# add key

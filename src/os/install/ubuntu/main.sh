@@ -284,6 +284,7 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     # Teamviewer
 
+    install_package "libjpeg62" "libjpeg62"
     install_url "Teamviewer" "teamviewer" "https://download.teamviewer.com/download/teamviewer_i386.deb"
     execute "sudo apt-get -f install" "sudo apt-get -f install"
 

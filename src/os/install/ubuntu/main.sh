@@ -35,9 +35,6 @@ main() {
 
     install_package "Chromium" "chromium-browser"
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    install_package "Disk Usage Analyzer" "baobab"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -55,19 +52,12 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    install_package "enigmail" "enigmail"
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
     install_package "Firefox" "firefox"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "Flash" "flashplugin-installer"
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    install_package "fslint" "fslint"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -146,14 +136,6 @@ main() {
     install_package "writer2latex" "libreoffice-writer2latex"
     install_package "pdf-presenter-console" "pdf-presenter-console"
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    install_package "lm-sensors" "lm-sensors"
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    install_package "nano" "nano"
-
     
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -181,37 +163,11 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    # if ! package_is_installed "owncloud-client"; then
-
-    #     add_key "http://download.opensuse.org/repositories/isv:ownCloud:desktop/Ubuntu_14.04/Release.key"
-
-    #     add_to_source_list "http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Ubuntu_14.10/ /" "owncloud-client.list" \
-    #         || print_error "Owncloud (add to package resource list)"
-
-    #     update &> /dev/null \
-    #         || print_error "Owncloud (resync package index files)"
-
-    # fi
-
-    # install_package "Owncloud" "owncloud-client"
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
     install_package "pandoc" "pandoc"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    install_package "pdftk" "pdftk"
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    install_package "pgadmin" "pgadmin3"    
-    install_package "postgis" "postgis"
-    install_package "udunits-bin" "udunits-bin"
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    install_package "preload" "preload"   
+    install_package "pdftk" "pdftk" 
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -237,45 +193,11 @@ main() {
     install_package "libgsl-dev" "libgsl-dev"
     install_package "subversion" "subversion"
     install_package "ccache" "ccache"
-    execute "sudo R CMD javareconf" "sudo R CMD javareconf"
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    install_photo
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    install_package "rbenv" "rbenv"   
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    install_package "rhythmbox" "rhythmbox"    
+    execute "sudo R CMD javareconf" "sudo R CMD javareconf"  
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     ## Source code pro
     install_scp
-
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    install_package "ruby2.3" "ruby2.3"
-    install_package "ruby2.3-dev" "ruby2.3-dev"
-    execute "sudo gem2.3 install jekyll" "Installing Jekyll"
-    execute "sudo gem2.3 install github-pages" "Install github-pages gem"
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    # install_package "samba" "samba"
-    # install_package "smbclient" "smbclient"
-    # install_package "cifs-utils" "cifs-utils"
-    # install_package "openconnect" "openconnect"
-    # install_package "network-manager-openconnect" "network-manager-openconnect"
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    install_package "skype" "skype" 
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    install_package "shutter" "shutter"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -289,22 +211,6 @@ main() {
 
     install_package "apt-xapian-index" "apt-xapian-index"
     install_package "synaptic" "synaptic"   
-    
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    # Teamviewer
-
-    install_package "libjpeg62" "libjpeg62"
-    install_url "Teamviewer" "teamviewer" "https://download.teamviewer.com/download/teamviewer_i386.deb"
-    execute "sudo apt-get -f install" "sudo apt-get -f install"
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    install_package "thunderbird" "thunderbird"
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    install_package "tlp" "tlp"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -327,41 +233,12 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    install_package "tor" "tor"
-
-    if ! package_is_installed "tor-browser"; then
-        add_ppa "webupd8team/tor-browser"
-        update
-    fi
-    
-    install_package "tor-browser" "tor-browser"
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
     install_package "tree" "tree"
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    # install_package "unison" "unison"
-    # install_package "unison-gtk" "unison-gtk"
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    install_package "VLC" "vlc"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "xfce4-sensors-plugin" "xfce4-sensors-plugin"
     install_package "xfce4-mount-plugin" "xfce4-mount-plugin"
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    # zotero
-
-    # execute 'install_zotero' 'Zotero' # script from sources
-    # from ppa
-    add_ppa "smathot/cogscinl "
-    update
-    install_package "zotero-standalone" "zotero-standalone"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -402,33 +279,9 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    print_in_yellow "Install AngrySearch. https://github.com/DoTheEvo/ANGRYsearch.
-    Done?"
-    ask_for_confirmation
-
-    print_in_yellow "Copy Thunderbird Profiles.
-    Done?"
-    ask_for_confirmation
-
-    print_in_yellow "Export and Import Enigmail/pgp settings?
-    Done?"
-    ask_for_confirmation
-
-    print_in_yellow "Copy Firefox settings (addons, blog/feeds, bookmarks).
-    Done?"
-    ask_for_confirmation
-
-    print_in_yellow "Copy .pgadmin.
-    Done?"
-    ask_for_confirmation
-
     print_in_yellow "Copy .ssh/. 
     Run chmod 600 ~/.ssh/id_rsa
     Run ssh-add
-    Done?"
-    ask_for_confirmation
-
-    print_in_yellow "Zotero library & set location.
     Done?"
     ask_for_confirmation
 

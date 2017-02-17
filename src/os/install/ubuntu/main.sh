@@ -203,6 +203,7 @@ main() {
 
     install_package "pgadmin" "pgadmin3"    
     install_package "postgis" "postgis"
+    install_package "udunits-bin" "udunits-bin"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -232,6 +233,7 @@ main() {
     install_package "libgsl-dev" "libgsl-dev"
     install_package "subversion" "subversion"
     install_package "ccache" "ccache"
+    execute "sudo R CMD javareconf" "sudo R CMD javareconf"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

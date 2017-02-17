@@ -138,7 +138,7 @@ install_photo() {
 }
 
 install_z() {
-    execute "wget https://raw.githubusercontent.com/rupa/z/master/z.sh -O ~/z.sh" "Download z"
+    execute "sudo wget https://raw.githubusercontent.com/rupa/z/master/z.sh -O ~/z.sh" "Download z"
 }
 
 install_scp() {

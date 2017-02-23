@@ -67,6 +67,10 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    install_package "fslint" "fslint"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
     install_package "gdal-bin" "gdal-bin"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -267,6 +271,10 @@ main() {
     # install_package "network-manager-openconnect" "network-manager-openconnect"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    install_package "skype" "skype" 
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     install_package "shutter" "shutter"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -414,7 +422,17 @@ main() {
     Done?"
     ask_for_confirmation
 
-    print_in_yellow "Copy .ssh/.
+    print_in_yellow "Copy .ssh/. 
+    Run chmod 600 ~/.ssh/id_rsa
+    Run ssh-add
+    Done?"
+    ask_for_confirmation
+
+    print_in_yellow "Zotero library & set location.
+    Done?"
+    ask_for_confirmation
+
+    print_in_yellow "Install RStudio daily.
     Done?"
     ask_for_confirmation
 

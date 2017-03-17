@@ -1,3 +1,5 @@
+#! This needs to be automised
+
 # add to /etc/environment
 http_proxy=http://clientproxy.basf.net:8080
 https_proxy=http://clientproxy.basf.net:8080
@@ -15,6 +17,7 @@ Acquire::https::proxy "https://clientproxy.basf.net:8080/";
 Acquire::socks::proxy "socks://clientproxy.basf.net:8080/";
 
 # in /home/edisz/.gitconfig
+
 [user]
         email = eduardszoecs@gmail.com
         name = EDiLD
@@ -22,6 +25,9 @@ Acquire::socks::proxy "socks://clientproxy.basf.net:8080/";
         proxy = http://clientproxy.basf.net:8080/
 [credential]
         helper = cache --timeout=3600
+[push]
+        default = simple
+
 
 
 # add to /home/edisz/.ssh/config

@@ -149,6 +149,7 @@ main() {
     install_package "libffi-dev" "libffi-dev"
     execute "sudo pip3 install ocrmypdf" "ocrmypdf"
 
+
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "okular" "okular"
@@ -275,6 +276,26 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     install_docker
 
+
+     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    install_package "unixodbc" "unixodbc"
+    install_package "unixodbc-dev" "unixodbc-dev"
+    install_package "alien" "alien"
+    install_package "libaio1" "libaio1"
+
+
+    print_in_yellow "Install Oracle drivers
+    # bash
+    # odbc
+    # sdk / devel
+    # see als R install script for ROracle
+
+    https://help.ubuntu.com/community/Oracle%20Instant%20Client.
+    http://www.oracle.com/technetwork/database/features/instant-client/index-097480.html
+    Done?"
+    ask_for_confirmation
+    execute "echo '/usr/lib/oracle/12.2/client64/lib' | sudo tee /etc/ld.so.conf.d/oracle.conf" "set oracle conf"
+    execute "sudo ldconfig -v" "update cache"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

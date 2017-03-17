@@ -61,7 +61,7 @@ library(devtools)
 inst_pkg <- installed.packages()[,'Package']
 
 git_pkg <- c('EDiLD/esmisc', 'gaborcsardi/prompt', 'gaborcsardi/parr',
-  'gaborcsardi/gitty', 'gaborcsardi/prettycode')
+  'gaborcsardi/gitty', 'gaborcsardi/prettycode', 'rstats-db/odbc')
 git_pkg <- git_pkg[!(git_pkg %in% inst_pkg)]
 if (length(git_pkg) > 0 & 'devtools' %in% inst_pkg) {
        lapply(git_pkg, function(y) install_github(repo = y, lib.loc =  '~/R/library'))
@@ -78,6 +78,9 @@ if (length(bioc_pkg) > 0) {
        biocLite(bioc_pkg)
 }
 
+# ROracle ---------------------------------------------------------------------
+install.packages('ROracle', 
+                 configure.args ='--with-oci-lib=/usr/lib/oracle/12.2/client64/lib --with-oci-inc=/usr/include/oracle/12.2/client64')
 
 # Update existing ------------------------------------------------------------
 message('Updating packages...')

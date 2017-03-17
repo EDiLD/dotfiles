@@ -182,6 +182,29 @@ install_sublime_pc() {
 	execute "git clone https://github.com/titoBouzout/WordCount.git /home/edisz/.config/sublime-text-3/Packages/WordCount" "Install word count"
 }
 
+install_docker() {
+    install_package "apt-transport-https" "apt-transport-https"
+    install_package "ca-certificates" "ca-certificates"
+    install_package "software-properties-common" "software-properties-common"
+    execute "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -" "Add Docker key"
+    execute "sudo add-apt-repository 'deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable'"
+    update
+    install_package "docker-ce" "docker-ce"
+    # setup proxies
+    execute "mkdir -p /etc/systemd/system/docker.service.d" "Create systemd"
+    execute "echo '[Service]' | sudo tee --append /etc/systemd/system/docker.service.d/http-proxy.conf"
+    execute "echo 'Environment="HTTP_PROXY=http://clientproxy.basf.net:8080/" ""NO_PROXY=localhost,127.0.0.1,docker-registry, basf.net, basf-ag.de""' | sudo tee --append /etc/systemd/system/docker.service.d/http-proxy.conf"
+    execute "sudo systemctl daemon-reload" ""
+    execute "sudo systemctl restart docker" "Restart docker"
+}
+
+install_neo4j() {
+    execute "wget -O - https://debian.neo4j.org/neotechnology.gpg.key | sudo apt-key add -" "get neo4j key"
+    execute "echo 'deb http://debian.neo4j.org/repo stable/' | sudo tee -a /etc/apt/sources.list.d/neo4j.list" "Add repo"
+    update
+    install_package "neo4j=3.1.2" "neo4j=3.1.2"
+}
+
 package_is_installed() {
     dpkg -s "$1" &> /dev/null
 }

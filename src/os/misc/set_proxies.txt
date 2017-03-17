@@ -17,7 +17,6 @@ Acquire::https::proxy "https://***REMOVED***/";
 Acquire::socks::proxy "socks://***REMOVED***/";
 
 # in /home/edisz/.gitconfig
-
 [user]
         email = eduardszoecs@gmail.com
         name = EDiLD

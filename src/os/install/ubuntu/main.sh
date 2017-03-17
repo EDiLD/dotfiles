@@ -279,9 +279,7 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    print_in_yellow "Copy .ssh/. 
-    Run chmod 600 ~/.ssh/id_rsa
-    Run ssh-add
+    print_in_yellow "Setup proxies. Follow instructions in /src/os/misc/set_proxies.txt 
     Done?"
     ask_for_confirmation
 

@@ -117,25 +117,6 @@ install_gis() {
     fi
 }
 
-install_photo() {
-
-    if ! package_is_installed "rawtherapee"; then
-        execute "sudo add-apt-repository -y ppa:dhor/myway"
-        update
-        execute "sudo apt-get install --allow-unauthenticated -qqy rawtherapee" "rawtherapee" 
-    fi
-    if ! package_is_installed "hdrmerge"; then
-        execute "sudo apt-get install --allow-unauthenticated -qqy hdrmerge" "hdrmerge"  
-    fi
-    if ! package_is_installed "luminance-hdr"; then
-    	execute "sudo apt-get install --allow-unauthenticated -qqy luminance-hdr" "luminance-hdr" 
-    fi
-    if ! package_is_installed "hugin"; then
-        execute "sudo add-apt-repository -y ppa:hugin/hugin-builds"
-        update
-        execute "sudo apt-get install --allow-unauthenticated -qqy hugin enblend" "hugin" 
-    fi
-}
 
 install_z() {
     execute "sudo wget https://raw.githubusercontent.com/rupa/z/master/z.sh -O ~/z.sh" "Download z"

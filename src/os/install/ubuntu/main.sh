@@ -241,11 +241,11 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    install_photo
+    # install_photo
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    # # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    install_package "rbenv" "rbenv"   
+    # install_package "rbenv" "rbenv"   
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -270,12 +270,12 @@ main() {
     # install_package "openconnect" "openconnect"
     # install_package "network-manager-openconnect" "network-manager-openconnect"
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    # # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    install_package "skype" "skype" 
+    # install_package "skype" "skype" 
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    install_package "shutter" "shutter"
+    # # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    # install_package "shutter" "shutter"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

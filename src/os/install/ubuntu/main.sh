@@ -126,10 +126,6 @@ main() {
     install_package "biber" "biber"
     install_package "texinfo" "texinfo"
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    # install_package "leafpad" "leafpad"
-
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -275,6 +271,9 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     remove_package "brltty"
     remove_package "brltty-x11"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    install_docker
 
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

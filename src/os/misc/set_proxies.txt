@@ -17,7 +17,6 @@ Acquire::https::proxy "https://clientproxy.basf.net:8080/";
 Acquire::socks::proxy "socks://clientproxy.basf.net:8080/";
 
 # in /home/edisz/.gitconfig
-
 [user]
         email = eduardszoecs@gmail.com
         name = EDiLD

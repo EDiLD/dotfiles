@@ -205,6 +205,18 @@ install_neo4j() {
     install_package "neo4j=3.1.2" "neo4j=3.1.2"
 }
 
+# install_vmtools() {
+#     # add keys
+#     execute "wget http://packages.vmware.com/tools/keys/VMWARE-PACKAGING-GPG-DSA-KEY.pub"
+#     execture "wget http://packages.vmware.com/tools/keys/VMWARE-PACKAGING-GPG-RSA-KEY.pub"
+#     execute "sudo apt-key add VMWARE-PACKAGING-GPG-DSA-KEY.pub"
+#     execute "sudo apt-key add VMWARE-PACKAGING-GPG-RSA-KEY.pub"
+
+#     # add to sources.list
+#     execute "sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak"
+#     execute "echo 'deb http://packages.vmware.com/tools/esx/4.1u1/ubuntu maverick main restricted' | sudo tee -a /etc/apt/sources.list.d/neo4j.list" "Add repo"
+# }
+
 package_is_installed() {
     dpkg -s "$1" &> /dev/null
 }

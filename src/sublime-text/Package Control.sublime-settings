@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"Git",
 		"GitGutter",
 		"knitr",
 		"LanguageTool",
@@ -14,7 +15,7 @@
 		"PlainTasks",
 		"PostgreSQL Syntax Highlighting",
 		"R-Box",
-		"SendTextPlus",
+		"SendREPL",
 		"SideBarEnhancements",
 		"SQLExec",
 		"SublimeGit",

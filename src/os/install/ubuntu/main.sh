@@ -49,6 +49,11 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    install_docker
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    
+
     install_package "libqt5libqgtk2" "libqt5libqgtk2"
     # install_package "plasma-desktop" "plasma-desktop"
     install_package "Dolphin" "dolphin"
@@ -178,22 +183,6 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "openjdk-8-jdk" "openjdk-8-jdk"
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    # if ! package_is_installed "owncloud-client"; then
-
-    #     add_key "http://download.opensuse.org/repositories/isv:ownCloud:desktop/Ubuntu_14.04/Release.key"
-
-    #     add_to_source_list "http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Ubuntu_14.10/ /" "owncloud-client.list" \
-    #         || print_error "Owncloud (add to package resource list)"
-
-    #     update &> /dev/null \
-    #         || print_error "Owncloud (resync package index files)"
-
-    # fi
-
-    # install_package "Owncloud" "owncloud-client"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

@@ -104,6 +104,22 @@ install_zotero() {
     fi
 }
 
+install_docker() {
+    install_package "apt-transport-https" "apt-transport-https"
+    install_package "ca-certificates" "ca-certificates"
+    install_package "software-properties-common" "software-properties-common"
+    execute "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -" "Add Docker key"
+    execute "sudo add-apt-repository 'deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable'"
+    update
+    install_package "docker-ce" "docker-ce"
+    # setup proxies
+    execute "mkdir -p /etc/systemd/system/docker.service.d" "Create systemd"
+    execute "echo '[Service]' | sudo tee --append /etc/systemd/system/docker.service.d/http-proxy.conf"
+    execute "echo 'Environment="HTTP_PROXY=http://***REMOVED***/" ""NO_PROXY=localhost,127.0.0.1,docker-registry, basf.net, basf-ag.de""' | sudo tee --append /etc/systemd/system/docker.service.d/http-proxy.conf"
+    execute "sudo systemctl daemon-reload" ""
+    execute "sudo systemctl restart docker" "Restart docker"
+}
+
 install_gis() {
 
     if ! package_is_installed "qgis"; then

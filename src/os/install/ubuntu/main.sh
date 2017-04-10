@@ -261,7 +261,7 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    install_package "skype" "skype" 
+    # install_package "skype" "skype" 
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     install_package "shutter" "shutter"

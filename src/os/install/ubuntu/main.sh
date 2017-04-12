@@ -153,7 +153,12 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    install_package "libudunits2-dev" "libudunits2-dev"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
     install_package "lm-sensors" "lm-sensors"
+
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -191,6 +196,10 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "pdftk" "pdftk"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    install_package "playonlinux" "playonlinux"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -385,8 +394,8 @@ main() {
     install_z
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    remove_package "brltty"
-    remove_package "brltty-x11"
+    # remove_package "brltty"
+    # remove_package "brltty-x11"
 
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

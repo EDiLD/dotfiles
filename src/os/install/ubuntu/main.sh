@@ -235,6 +235,7 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "unison" "unison"
+    install_package "unison-gtk" "unison-gtk"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

@@ -234,6 +234,10 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    install_package "unison" "unison"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
     install_package "xfce4-sensors-plugin" "xfce4-sensors-plugin"
     install_package "xfce4-mount-plugin" "xfce4-mount-plugin"
 

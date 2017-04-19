@@ -159,6 +159,10 @@ main() {
 
     install_package "lm-sensors" "lm-sensors"
 
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    install_package "meld" "meld"
+
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

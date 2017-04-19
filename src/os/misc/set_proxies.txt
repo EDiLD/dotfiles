@@ -1,27 +1,27 @@
 #! This needs to be automised
 
 # add to /etc/environment
-http_proxy=http://clientproxy.basf.net:8080
-https_proxy=http://clientproxy.basf.net:8080
-ftp_proxy=http://clientproxy.basf.net:8080
+http_proxy=http://***REMOVED***
+https_proxy=http://***REMOVED***
+ftp_proxy=http://***REMOVED***
 no_proxy="localhost,127.0.0.1,basf.net,basf-ag.de"
 
-HTTP_PROXY=http://clientproxy.basf.net:8080
-HTTPS_PROXY=http://clientproxy.basf.net:8080
-FTP_PROXY=http://clientproxy.basf.net:8080
+HTTP_PROXY=http://***REMOVED***
+HTTPS_PROXY=http://***REMOVED***
+FTP_PROXY=http://***REMOVED***
 NO_PROXY="localhost,127.0.0.1,basf.net,basf-ag.de"
 
 # add to /etc/apt/apt.conf
-Acquire::http::proxy "http://clientproxy.basf.net:8080/";
-Acquire::https::proxy "https://clientproxy.basf.net:8080/";
-Acquire::socks::proxy "socks://clientproxy.basf.net:8080/";
+Acquire::http::proxy "http://***REMOVED***/";
+Acquire::https::proxy "https://***REMOVED***/";
+Acquire::socks::proxy "socks://***REMOVED***/";
 
 # in /home/edisz/.gitconfig
 [user]
         email = eduardszoecs@gmail.com
         name = EDiLD
 [http]
-        proxy = http://clientproxy.basf.net:8080/
+        proxy = http://***REMOVED***/
 [credential]
         helper = cache --timeout=3600
 [push]
@@ -31,12 +31,12 @@ Acquire::socks::proxy "socks://clientproxy.basf.net:8080/";
 
 # add to /home/edisz/.ssh/config
 Host github.com
-	ProxyCommand		nc -X connect -x clientproxy.basf.net:8080 %h %p
+	ProxyCommand		nc -X connect -x ***REMOVED*** %h %p
 	ServerAliveInterval	10
 
 
 # in /etc/default/docker
-export http_proxy="http://clientproxy.basf.net:8080/"
+export http_proxy="http://***REMOVED***/"
 
 #or run
 Create a systemd drop-in directory for the docker service:

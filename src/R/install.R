@@ -33,7 +33,7 @@ cran_pkg <- c('ade4', 'agricolae',
               'scales', 'simecol', 'rodeo', 'sf', 'sp', 'spatial', 
               'spatstat', 'spsurvey', 'stargazer',
               'SSN', 'stringr', 'stringdist', 
-              'survival', 'svglite', 'tidyr', 
+              'survival', 'svglite', 'tidyr', 'timevis', 
               'taxize', 'testthat', 'tikzDevice', 'timeSeries',
               'tm', 'tseries', 'vegan', 'VGAM', 'vioplot', 'webchem',
               'xml2', 'xkcd', 'xslx', 'xtable', 'zoo')

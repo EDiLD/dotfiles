@@ -135,6 +135,10 @@ main() {
     
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    install_package "meld" "meld"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
     install_package "openbabel" "openbabel"
     install_package "libopenbabel-dev" "libopenbabel-dev"
     install_package "openbabel-gui" "openbabel-gui"

@@ -159,6 +159,10 @@ main() {
 
     install_package "lm-sensors" "lm-sensors"
 
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    install_package "meld" "meld"
+
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -340,8 +344,8 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    # install_package "unison" "unison"
-    # install_package "unison-gtk" "unison-gtk"
+    install_package "unison" "unison"
+    install_package "unison-gtk" "unison-gtk"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

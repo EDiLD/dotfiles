@@ -135,6 +135,10 @@ main() {
     
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    install_package "meld" "meld"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
     install_package "openbabel" "openbabel"
     install_package "libopenbabel-dev" "libopenbabel-dev"
     install_package "openbabel-gui" "openbabel-gui"
@@ -231,6 +235,11 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "tree" "tree"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    install_package "unison" "unison"
+    install_package "unison-gtk" "unison-gtk"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

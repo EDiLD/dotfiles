@@ -193,7 +193,7 @@ install_docker() {
     # setup proxies
     execute "mkdir -p /etc/systemd/system/docker.service.d" "Create systemd"
     execute "echo '[Service]' | sudo tee --append /etc/systemd/system/docker.service.d/http-proxy.conf"
-    execute "echo 'Environment="HTTP_PROXY=http://clientproxy.basf.net:8080/" ""NO_PROXY=localhost,127.0.0.1,docker-registry, basf.net, basf-ag.de""' | sudo tee --append /etc/systemd/system/docker.service.d/http-proxy.conf"
+    execute "echo 'Environment="HTTP_PROXY=http://***REMOVED***/" ""NO_PROXY=localhost,127.0.0.1,docker-registry, basf.net, basf-ag.de""' | sudo tee --append /etc/systemd/system/docker.service.d/http-proxy.conf"
     execute "sudo systemctl daemon-reload" ""
     execute "sudo systemctl restart docker" "Restart docker"
 }

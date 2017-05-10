@@ -285,8 +285,11 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     install_docker
 
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    install_package "unison" "unison"
+    install_package "unison-gtk" "unison-gtk"
 
-     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     install_package "unixodbc" "unixodbc"
     install_package "unixodbc-dev" "unixodbc-dev"
     install_package "alien" "alien"

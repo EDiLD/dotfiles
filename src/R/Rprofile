@@ -2,6 +2,7 @@
     # set location for R library
 	.libPaths('~/R/library/')
 	Sys.setenv(R_LIBS = .libPaths()[1])  
+	Sys.setenv(ASREML_LICENSE_FILE = "/mnt/hgfs/Z/asreml/asreml.lic")
 	if (interactive() & Sys.getenv("RSTUDIO") != 1) {
 		# Git commands from the R console, see https://github.com/gaborcsardi/gitty
 	    library("gitty")

@@ -202,6 +202,10 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    install_package "sqlitebrowser" "sqlitebrowser"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
     add_ppa "webupd8team/sublime-text-3"
     update
     install_package "sublime-text-installer" "sublime-text-installer"
@@ -285,8 +289,11 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     install_docker
 
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    install_package "unison" "unison"
+    install_package "unison-gtk" "unison-gtk"
 
-     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     install_package "unixodbc" "unixodbc"
     install_package "unixodbc-dev" "unixodbc-dev"
     install_package "alien" "alien"

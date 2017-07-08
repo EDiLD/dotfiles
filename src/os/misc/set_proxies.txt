@@ -33,7 +33,9 @@ Acquire::socks::proxy "socks://***REMOVED***/";
 Host github.com
 	ProxyCommand		nc -X connect -x ***REMOVED*** %h %p
 	ServerAliveInterval	10
-
+Host <gitlab at work>
+	ProxyCommand		nc -X connect -x ***REMOVED*** %h %p
+	ServerAliveInterval	10
 
 # in /etc/default/docker
 export http_proxy="http://***REMOVED***/"

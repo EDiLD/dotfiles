@@ -33,6 +33,9 @@ Acquire::socks::proxy "socks://***REMOVED***/";
 Host github.com
 	ProxyCommand		nc -X connect -x ***REMOVED*** %h %p
 	ServerAliveInterval	10
+Host mws11.a030.basf-ag.de
+	ProxyCommand		nc -X connect -x clientproxy.basf.net:8080 %h %p
+	ServerAliveInterval	10
 
 
 # in /etc/default/docker

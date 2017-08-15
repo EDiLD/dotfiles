@@ -107,6 +107,7 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_package "ImageMagick" "imagemagick"
+    install_package "ImageMagick-dev" "libmagick++-dev"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

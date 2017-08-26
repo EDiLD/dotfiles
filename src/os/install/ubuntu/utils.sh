@@ -67,6 +67,14 @@ remove_package(){
     apt-get purge "$1"
 }
 
+install_code(){
+    execute "curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg"
+    execute "sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg"
+    execute "sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'"
+    update
+    execute "sudo apt-get install code"
+}
+
 install_zotero() {
     VERSION="4.0.29.10"
     if [ `uname -m` == "x86_64" ]; then

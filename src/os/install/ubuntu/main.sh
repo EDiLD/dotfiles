@@ -35,6 +35,9 @@ main() {
 
     install_package "Chromium" "chromium-browser"
 
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    
+    install_code
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
